@@ -10,8 +10,8 @@ namespace BoatAttack
     {
         private InputControls _controls;
 
-        private float _throttle;
-        private float _steering;
+        public float _throttle;
+        public float _steering;
 
         private bool _paused;
         
