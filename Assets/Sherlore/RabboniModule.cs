@@ -1,0 +1,524 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+
+public class RabboniModule : MonoBehaviour
+{
+	public enum State
+	{
+		Disconnected,
+		Scanning,
+		Connecting,
+		Subscribed
+	}
+	
+	public RabboniConsole console;
+	// public UIRabboniModule UIModule;
+	
+	public State state;
+	
+	public string targetAddress;
+	
+	public string deviceId = "Device";
+	public RabboniConsole.DeviceType deviceType;
+	
+	public bool subscribeChecked;
+	public bool prefsChecked;
+	public bool isConnected;
+	
+	public float _accScale = 2f;
+	public float accScale
+	{
+		get
+		{
+			return _accScale;
+		}
+		set
+		{
+			_accScale = value;
+			// UIModule.maxAcc = value;
+		}
+	}
+	public Vector3 _lastAcc;
+	public Vector3 lastAcc
+	{
+		get
+		{
+			return _lastAcc;
+		}
+		set
+		{
+			_lastAcc = value;
+			// UIModule.acc = value;
+		}
+	}
+	
+	public float _gyroScale = 1000f;
+	public float gyroScale
+	{
+		get
+		{
+			return _gyroScale;
+		}
+		set
+		{
+			_gyroScale = value;
+			// UIModule.maxGyro = value;
+		}
+	}
+	public Vector3 _lastGyro;
+	public Vector3 lastGyro
+	{
+		get
+		{
+			return _lastGyro;
+		}
+		set
+		{
+			_lastGyro = value;
+			// UIModule.gyro = value;
+		}
+	}	
+	
+	[Header("Log")]
+	public UnityEvent<string> addressLog;
+	public UnityEvent<string> statusStrLog;
+	// public UnityEvent<Color> statusColorLog;
+	public UnityEvent<int> statusLog;
+	
+	// public UnityEvent<bool> buttonSetSwitch;	
+	public UnityEvent<bool> buttonStopScanSwitch;
+	public UnityEvent<bool> buttonInterruptConnectSwitch;
+	
+	[Header("Event")]
+	public UnityEvent connectedEvent;
+	public UnityEvent disconnectedEvent;
+	public UnityEvent<Vector3, Vector3> IMUEvent;
+	
+	public Text testLog;
+	
+	public string GetDeviceName()
+	{
+		return console.GetDeviceName(deviceType);
+	}
+	
+    // Start is called before the first frame update
+    // void Start()
+    // {
+		// Initialize();
+    // }
+	
+	public void Initialize()
+	{
+		if(isConnected)
+		{
+			statusStrLog.Invoke("Connected");
+			statusLog.Invoke( (int)state );
+		}
+		else
+		{
+			statusStrLog.Invoke("Wait to connect Rabboni");
+			statusLog.Invoke( (int)state );
+		}
+	}
+	
+	/*public void Scan()
+	{
+		state = State.Scanning;
+		statusLog.Invoke( state );		
+		statusStrLog.Invoke("Scanning...");
+		
+		buttonSetSwitch.Invoke(false);
+		buttonStopScanSwitch.Invoke(true);
+
+		BluetoothLEHardwareInterface.ScanForPeripheralsWithServices (null, (address, name) => 
+		{
+			// we only want to look at devices that have the name we are looking for
+			// this is the best way to filter out devices
+			for(int i = 0; i < console.DeviceNameRabboni.Length; i++)
+			{
+				if (name.Contains (console.DeviceNameRabboni[i]))
+				{
+					// it is always a good idea to stop Scanning while you connect to a device
+					// and get things set up
+					BluetoothLEHardwareInterface.StopScan ();
+
+					targetAddress = address;
+
+					deviceType = RabboniConsole.DeviceType.Rabboni;
+					statusStrLog.Invoke("發現目標");	
+					
+					addressLog.Invoke(targetAddress);	
+					PlayerPrefs.SetString(String.Format("{0}_TargetAddress", deviceId), targetAddress);
+					
+					// statusColorLog.Invoke(console.UIModule.disconnectedColor);
+					// buttonLinkSwitch.Invoke(true);
+					buttonSetSwitch.Invoke(true);
+					buttonStopScanSwitch.Invoke(false);
+					
+					state = State.Disconnected;
+					statusLog.Invoke( state );
+					return;
+				}
+			}
+			
+			for(int i = 0; i < console.DeviceNameNaxsen.Length; i++)
+			{
+				if (name.Contains (console.DeviceNameNaxsen[i]))
+				{
+					// it is always a good idea to stop Scanning while you connect to a device
+					// and get things set up
+					BluetoothLEHardwareInterface.StopScan ();
+
+					targetAddress = address;
+
+					deviceType = RabboniConsole.DeviceType.Naxsen;
+					statusStrLog.Invoke("發現目標");	
+					
+					addressLog.Invoke(targetAddress);	
+					PlayerPrefs.SetString(String.Format("{0}_TargetAddress", deviceId), targetAddress);
+					
+					buttonSetSwitch.Invoke(true);
+					buttonStopScanSwitch.Invoke(false);
+					
+					state = State.Disconnected;
+					statusLog.Invoke( state );
+					return;
+				}
+			}
+		}, null, false, false);
+	}*/
+	
+	public void StopScan()
+	{
+		state = State.Disconnected;
+		statusLog.Invoke( (int)state );
+		statusStrLog.Invoke("Stop Scanning");	
+		
+		BluetoothLEHardwareInterface.StopScan ();
+		
+		// buttonSetSwitch.Invoke(true);
+		buttonStopScanSwitch.Invoke(false);
+	}
+	
+	public void ScanAndConnect()
+	{
+		state = State.Scanning;
+		statusLog.Invoke( (int)state );
+		
+		statusStrLog.Invoke("Scanning...");	
+		// buttonSetSwitch.Invoke(false);
+		buttonStopScanSwitch.Invoke(true);
+
+		BluetoothLEHardwareInterface.ScanForPeripheralsWithServices (null, (address, name) => 
+		{
+			for(int i = 0; i < console.DeviceNameRabboni.Length; i++)
+			{
+				if (name.Contains (console.DeviceNameRabboni[i]))
+				{
+					// it is always a good idea to stop Scanning while you connect to a device
+					// and get things set up
+					BluetoothLEHardwareInterface.StopScan ();
+
+					targetAddress = address;
+
+					deviceType = RabboniConsole.DeviceType.Rabboni;
+					statusStrLog.Invoke("Found Rabboni");	
+										
+					state = State.Connecting;
+					statusLog.Invoke( (int)state );
+					statusStrLog.Invoke("Connecting...");	
+					
+					buttonStopScanSwitch.Invoke(false);
+					Invoke("Connect", 0.3f);
+					return;
+				}
+			}
+			
+			for(int i = 0; i < console.DeviceNameNaxsen.Length; i++)
+			{
+				if (name.Contains (console.DeviceNameNaxsen[i]))
+				{
+					// it is always a good idea to stop Scanning while you connect to a device
+					// and get things set up
+					BluetoothLEHardwareInterface.StopScan ();
+
+					targetAddress = address;
+
+					deviceType = RabboniConsole.DeviceType.Naxsen;
+					statusStrLog.Invoke("Found Naxsen");	
+										
+					state = State.Connecting;
+					statusLog.Invoke( (int)state );
+					statusStrLog.Invoke("Connecting...");
+					
+					buttonStopScanSwitch.Invoke(false);
+					Invoke("Connect", 0.3f);
+					return;
+				}
+			}
+
+		}, null, false, false);
+	}
+		
+	public void Connect()
+	{		
+		// buttonSetSwitch.Invoke(false);
+		buttonInterruptConnectSwitch.Invoke(true);
+		
+		subscribeChecked = false;
+		prefsChecked = false;
+
+		BluetoothLEHardwareInterface.ConnectToPeripheral (targetAddress, null, null, (address, serviceUUID, characteristicUUID) => 
+		{
+			//Android / iOS return different UUID format, android give fullUUID, iOS give only UUID
+			testLog.text += String.Format("{0}x{1}\n", serviceUUID.Substring(0, 4), characteristicUUID.Substring(0, 4));
+			
+			if (address == targetAddress)
+			{
+				if (!subscribeChecked)
+				{
+					if (console.IsEqual (serviceUUID, console.SubscribeServiceUUID) && console.IsEqual (characteristicUUID, console.SubscribeCharacteristic))
+					{
+						subscribeChecked = true;
+					}
+				}
+				
+				if (!prefsChecked)
+				{
+					if (console.IsEqual (serviceUUID, console.PrefsServiceUUID) && console.IsEqual (characteristicUUID, console.PrefsCharacteristic))
+					{
+						prefsChecked = true;
+					}
+				}
+				
+				console.moduleDic[address] = this;
+				if(!isConnected && subscribeChecked && prefsChecked)
+				{
+					statusStrLog.Invoke("Connection succeeded");	
+						
+					addressLog.Invoke(address);	
+					isConnected = true;
+					
+					buttonInterruptConnectSwitch.Invoke(false);
+									
+					Invoke("InitPrefs", 0.3f);		
+					// Invoke("SubscribePrefs", 0.5f);		
+				}
+			}
+		}, (disconnectedAddress) => 
+		{
+			BluetoothLEHardwareInterface.Log ("Device Disconnected: " + disconnectedAddress);
+			if(console.moduleDic.ContainsKey(disconnectedAddress) )
+			{
+				console.moduleDic[disconnectedAddress].OnBLEDisconnected();
+				console.moduleDic.Remove(disconnectedAddress);
+			}
+		});		
+	}
+	
+	public void InterruptConnect()
+	{
+		BluetoothLEHardwareInterface.DisconnectPeripheral (targetAddress, (disconnectedAddress) => 
+		{
+		});
+			
+		state = State.Disconnected;
+		statusLog.Invoke( (int)state );
+		statusStrLog.Invoke("Connection interrupted");	
+		
+		if(console.moduleDic.ContainsKey(targetAddress) )
+		{
+			console.moduleDic[targetAddress].OnBLEDisconnected();
+			console.moduleDic.Remove(targetAddress);
+		}
+		
+		isConnected = false;
+		lastAcc = Vector3.zero;
+		lastGyro = Vector3.zero;
+		
+		// buttonSetSwitch.Invoke(true);
+		buttonStopScanSwitch.Invoke(false);
+		buttonInterruptConnectSwitch.Invoke(false);
+				
+		disconnectedEvent.Invoke();
+	}
+	
+	public void OnBLEDisconnected()
+	{
+		state = State.Disconnected;
+		statusLog.Invoke( (int)state );			
+		statusStrLog.Invoke("Disconnected");	
+		
+		isConnected = false;
+		lastAcc = Vector3.zero;
+		lastGyro = Vector3.zero;
+			
+		// buttonSetSwitch.Invoke(true);
+		buttonStopScanSwitch.Invoke(false);
+				
+		disconnectedEvent.Invoke();
+	}
+	
+	
+	public void InitPrefs()
+	{
+		statusStrLog.Invoke("Initializing...");	
+				
+		string cmd = String.Empty;
+		
+		if(deviceType == RabboniConsole.DeviceType.Rabboni)
+		{
+			cmd = String.Format("45{0}{1}011201010000{2}00000009C4", "00", "00", "00" );
+		}
+		else
+		{
+			cmd = String.Format("45{0}{1}01000001000000{2}00", "00", "00", "00" );
+		}
+		
+		byte[] data = console.StringToByteArray(cmd);
+		// byte[] data = new byte[] { 0x49 };
+		
+		BluetoothLEHardwareInterface.WriteCharacteristic (targetAddress, console.PrefsServiceUUID, console.PrefsCharacteristic, data, data.Length, true, (characteristicUUID) => 
+		{
+			statusStrLog.Invoke("Done initialization");	
+			
+			Invoke("ResetPrefs", 0.3f);
+		});
+	}
+	
+	public void ResetPrefs()
+	{
+		statusStrLog.Invoke("Set sensitivity...");	
+				
+		string cmd = String.Empty;
+		
+		if(deviceType == RabboniConsole.DeviceType.Rabboni)
+		{
+			cmd = String.Format("45{0}{1}011201010000{2}00000009C4", console.GetAccScaleCmd(), console.GetGyroScaleCmd(), console.GetDataRateCmd() );
+		}
+		else
+		{
+			cmd = String.Format("45{0}{1}01000001000000{2}00", console.GetAccScaleCmd(), console.GetGyroScaleCmd(), console.GetDataRateCmd() );
+		}
+		
+		accScale = console.GetAccScaleValue();
+		gyroScale = console.GetGyroScaleValue();
+		
+		byte[] data = console.StringToByteArray(cmd);
+		// byte[] data = new byte[] { 0x49 };
+		
+		BluetoothLEHardwareInterface.WriteCharacteristic (targetAddress, console.PrefsServiceUUID, console.PrefsCharacteristic, data, data.Length, true, (characteristicUUID) => 
+		{
+			statusStrLog.Invoke("Done setting");	
+			
+			Invoke("Subscribe", 0.3f);
+			Invoke("GetBatteryLevel", 0.3f);
+		});
+	}
+		
+	
+	/*public void InitPrefs()
+	{
+		UIModule.status = "初始化Rabboni參數";
+		testLog.text += "初始化Rabboni參數: 2G\n";
+		string cmd = "4503020112010100000000001009C4";
+		byte[] data = StringToByteArray(cmd);
+		// byte[] data = new byte[] { 0x49 };
+		
+		BluetoothLEHardwareInterface.WriteCharacteristic (targetAddress, PrefsServiceUUID, PrefsCharacteristic, data, data.Length, true, (characteristicUUID) => {
+
+			UIModule.status = "Rabboni參數初始化成功";
+			testLog.text += String.Format("Rabboni參數初始化: {0}\n", cmd);
+			testLog.text += String.Format("等待: {0:F1}sec\n", 1f);	
+			
+			if(InvokeSubscribe2G)
+			{
+				Invoke("Subscribe", 1f);
+			}
+		});
+	}*/
+	
+	
+	public void SubscribePrefs()
+	{
+		statusStrLog.Invoke("訂閱Prefs回覆");	
+		
+		Invoke("RequestPrefs", 5f);
+		
+		BluetoothLEHardwareInterface.SubscribeCharacteristicWithDeviceAddress (targetAddress, "fff0", "fff7", null, (address, characteristicUUID, bytes) => 
+		{	
+			string data = console.ByteArrayToString(bytes);
+				
+			statusStrLog.Invoke(data);				
+		});
+	}
+	
+	public void RequestPrefs()
+	{
+		statusStrLog.Invoke("讀取Rabboni參數");	
+		byte[] data = new byte[] { 0x49 };
+		
+		BluetoothLEHardwareInterface.WriteCharacteristic (targetAddress, "fff0", "fff6", data, data.Length, false, (characteristicUUID) => 
+		{
+			// UIModule.status = "讀取Rabboni參數";
+			// testLog.text += "讀取Rabboni參數\n";
+			// testLog.text += String.Format("{0}\n", characteristicUUID);
+			// Invoke("Subscribe", 5f);
+		});
+	}	
+	
+	public void OnSubscriveData(byte[] bytes)
+	{
+		string data = console.ByteArrayToString(bytes);
+		
+		int[] dataElement = new int[6];
+		
+		for(int i=0; i < 6; i++)
+		{
+			string tempHex = data.Substring(i*4, 4);
+			short tempVal = Convert.ToInt16(tempHex, 16);
+			dataElement[i] = tempVal;
+		}
+		
+		lastAcc = new Vector3(dataElement[0], dataElement[1], dataElement[2]) * accScale / 32768f;
+		lastGyro = new Vector3(dataElement[3], dataElement[4], dataElement[5]) * gyroScale / 32768f;
+		
+		IMUEvent.Invoke(lastAcc, lastGyro);
+	}
+	
+		
+	public void Subscribe()
+	{
+		state = State.Subscribed;
+		statusLog.Invoke( (int)state );	
+		statusStrLog.Invoke("Connected");	
+		
+		BluetoothLEHardwareInterface.SubscribeCharacteristicWithDeviceAddress (targetAddress, console.SubscribeServiceUUID, console.SubscribeCharacteristic, null, (address, characteristicUUID, bytes) => 
+		{			
+			if(console.moduleDic.ContainsKey(address) )
+			{
+				console.moduleDic[address].OnSubscriveData(bytes);
+			}
+		});
+		
+		connectedEvent.Invoke();
+	}
+	
+	public void GetBatteryLevel()
+	{
+		BluetoothLEHardwareInterface.ReadCharacteristic(targetAddress, "180f", "2a19", (characteristic, bytes) =>
+		{
+			string data = console.ByteArrayToString(bytes);
+			testLog.text += String.Format("BatteryLevel: {0}\n", data);	
+			
+			// if (BitConverter.IsLittleEndian)
+				// Array.Reverse(bytes); //need the bytes in the reverse order
+			int val = BitConverter.ToInt32(bytes, 0);
+			testLog.text += String.Format("BatteryLevel(val): {0}\n", val);	
+		});
+	}
+}
