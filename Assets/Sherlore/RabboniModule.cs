@@ -533,12 +533,15 @@ public class RabboniModule : MonoBehaviour
 		BluetoothLEHardwareInterface.ReadCharacteristic(targetAddress, "180f", "2a19", (characteristic, bytes) =>
 		{
 			testLog.text += String.Format("In: {0}\n", "GetBatteryLevel");
+			
 			string tempHex = console.ByteArrayToString(bytes);
 			testLog.text += String.Format("BatteryLevel: {0}\n", tempHex);	
 			
 			short tempVal = Convert.ToInt16(tempHex, 16);
 			
-			batteryLevel = tempVal;			
+			batteryLevel = tempVal;		
+			testLog.text += String.Format("BatteryLevel(int): {0}\n", batteryLevel);	
+			
 			batteryLevelEvent.Invoke(batteryLevel);
 		});
 	}
