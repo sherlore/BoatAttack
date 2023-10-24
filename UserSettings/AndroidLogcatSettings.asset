@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "FA7871802004",
         "name": "com.Sherlore.BoatAttack",
-        "processId": 7067,
+        "processId": 8201,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -48,6 +48,18 @@
             "deviceId": "FA7871802004",
             "name": "com.Sherlore.BoatAttack",
             "processId": 7067,
+            "exited": false
+        },
+        {
+            "deviceId": "FA7871802004",
+            "name": "com.Sherlore.BoatAttack",
+            "processId": 7443,
+            "exited": false
+        },
+        {
+            "deviceId": "FA7871802004",
+            "name": "com.Sherlore.BoatAttack",
+            "processId": 8201,
             "exited": false
         }
     ],

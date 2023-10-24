@@ -274,7 +274,11 @@ public class RabboniModule : MonoBehaviour
 		BluetoothLEHardwareInterface.ConnectToPeripheral (targetAddress, null, null, (address, serviceUUID, characteristicUUID) => 
 		{
 			//Android / iOS return different UUID format, android give fullUUID, iOS give only UUID
+			#if UNITY_ANDROID
 			testLog.text += String.Format("{0}x{1}\n", serviceUUID.Substring(4, 4), characteristicUUID.Substring(4, 4));
+			#else
+			testLog.text += String.Format("{0}x{1}\n", serviceUUID.Substring(0, 4), characteristicUUID.Substring(0, 4));
+			#endif
 			
 			if (address == targetAddress)
 			{
