@@ -277,7 +277,8 @@ public class RabboniModule : MonoBehaviour
 			#if UNITY_ANDROID
 			testLog.text += String.Format("{0}x{1}\n", serviceUUID.Substring(4, 4), characteristicUUID.Substring(4, 4));
 			#else
-			testLog.text += String.Format("{0}x{1}\n", serviceUUID.Substring(0, 4), characteristicUUID.Substring(0, 4));
+			// testLog.text += String.Format("{0}x{1}\n", serviceUUID.Substring(0, 4), characteristicUUID.Substring(0, 4));
+			testLog.text += String.Format("{0}x{1}\n", serviceUUID, characteristicUUID);
 			#endif
 			
 			if (address == targetAddress)
@@ -418,7 +419,7 @@ public class RabboniModule : MonoBehaviour
 			statusStrLog.Invoke("Done setting");	
 			
 			Invoke("Subscribe", 0.3f);
-			Invoke("GetBatteryLevel", 0.5f);
+			Invoke("GetBatteryLevel", 1f);
 		});
 	}
 		
@@ -512,6 +513,7 @@ public class RabboniModule : MonoBehaviour
 	
 	public void GetBatteryLevel()
 	{
+		testLog.text += String.Format("Fun: {0}\n", "GetBatteryLevel");	
 		BluetoothLEHardwareInterface.ReadCharacteristic(targetAddress, "180f", "2a19", (characteristic, bytes) =>
 		{
 			string data = console.ByteArrayToString(bytes);
