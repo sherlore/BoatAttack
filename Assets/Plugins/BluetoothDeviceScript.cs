@@ -45,8 +45,8 @@ public class BluetoothDeviceScript : MonoBehaviour
 
 #if UNITY_IOS
         BLEStandardUUIDs["Heart Rate Measurement"] = "00002A37-0000-1000-8000-00805F9B34FB";
-        BLEStandardUUIDs["Battery"] = "0000180F-0000-1000-8000-00805F9B34FB";
-        BLEStandardUUIDs["Battery Level"] = "00002A19-0000-1000-8000-00805F9B34FB";
+        // BLEStandardUUIDs["Battery"] = "0000180F-0000-1000-8000-00805F9B34FB";
+        BLEStandardUUIDs["Battery Level"] = "2a19";
 #endif
     }
 
@@ -308,7 +308,7 @@ public class BluetoothDeviceScript : MonoBehaviour
 			if (bytes.Length > 0)
 			{
 				deviceAddress = deviceAddress.ToUpper ();
-				characteristic = characteristic.ToUpper ();
+				// characteristic = characteristic.ToUpper ();
 
 #if UNITY_IOS
                 if (BLEStandardUUIDs.ContainsKey(characteristic))
