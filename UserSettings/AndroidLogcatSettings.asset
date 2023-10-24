@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "FA7871802004",
         "name": "com.Sherlore.BoatAttack",
-        "processId": 9454,
+        "processId": 7067,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -17,49 +17,37 @@
         {
             "deviceId": "FA7871802004",
             "name": "com.Sherlore.BoatAttack",
-            "processId": 3538,
-            "exited": true
-        },
-        {
-            "deviceId": "FA7871802004",
-            "name": "com.Sherlore.BoatAttack",
-            "processId": 4401,
-            "exited": true
-        },
-        {
-            "deviceId": "FA7871802004",
-            "name": "com.Sherlore.BoatAttack",
-            "processId": 4977,
-            "exited": false
-        },
-        {
-            "deviceId": "FA7871802004",
-            "name": "com.Sherlore.BoatAttack",
-            "processId": 6989,
-            "exited": false
-        },
-        {
-            "deviceId": "FA7871802004",
-            "name": "com.Sherlore.BoatAttack",
-            "processId": 8144,
-            "exited": false
-        },
-        {
-            "deviceId": "FA7871802004",
-            "name": "com.Sherlore.BoatAttack",
             "processId": 8664,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "FA7871802004",
             "name": "com.Sherlore.BoatAttack",
             "processId": 9060,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "FA7871802004",
             "name": "com.Sherlore.BoatAttack",
             "processId": 9454,
+            "exited": true
+        },
+        {
+            "deviceId": "FA7871802004",
+            "name": "com.Sherlore.BoatAttack",
+            "processId": 1248,
+            "exited": true
+        },
+        {
+            "deviceId": "FA7871802004",
+            "name": "com.Sherlore.BoatAttack",
+            "processId": 6043,
+            "exited": false
+        },
+        {
+            "deviceId": "FA7871802004",
+            "name": "com.Sherlore.BoatAttack",
+            "processId": 7067,
             "exited": false
         }
     ],

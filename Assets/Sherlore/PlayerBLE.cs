@@ -20,6 +20,7 @@ public class PlayerBLE : MonoBehaviour
 		// public GameObject buttonLink;
 		public GameObject buttonStopScan;
 		public GameObject buttonInterruptConnect;
+		public Scrollbar batteryLevelBar;
 				
 		public UnityEvent<bool> disconnectedPageEvent;
 		public UnityEvent<bool> scanningPageEvent;
@@ -38,6 +39,7 @@ public class PlayerBLE : MonoBehaviour
 			// rabboniModule.addressLog.AddListener(LogAddress);
 			rabboniModule.statusLog.AddListener(LogStatus);
 			rabboniModule.statusStrLog.AddListener(LogStatusStr);
+			rabboniModule.batteryLevelEvent.AddListener(UpdateBatteryLevel);
 			// rabboniModule.buttonSetSwitch.AddListener(buttonSet.SetActive);
 			// rabboniModule.buttonLinkSwitch.AddListener(buttonLink.SetActive);
 			rabboniModule.buttonStopScanSwitch.AddListener(buttonStopScan.SetActive);
@@ -56,6 +58,7 @@ public class PlayerBLE : MonoBehaviour
 			// module.addressLog.RemoveListener(LogAddress);
 			module.statusLog.RemoveListener(LogStatus);
 			module.statusStrLog.RemoveListener(LogStatusStr);
+			module.batteryLevelEvent.RemoveListener(UpdateBatteryLevel);
 			// module.buttonSetSwitch.RemoveListener(buttonSet.SetActive);
 			// module.buttonLinkSwitch.RemoveListener(buttonLink.SetActive);
 			module.buttonStopScanSwitch.RemoveListener(buttonStopScan.SetActive);
@@ -113,6 +116,11 @@ public class PlayerBLE : MonoBehaviour
 			{
 				subscribedPageEvent.Invoke(true);
 			}
+		}
+		
+		public void UpdateBatteryLevel(int val)
+		{
+			batteryLevelBar.size = val/100f;
 		}
 	}
 	

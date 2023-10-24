@@ -78,12 +78,12 @@ namespace BoatAttack
 
         void FixedUpdate()
         {
-			float leftPower = Mathf.Lerp(0f, 1f, leftModule.lastAcc.magnitude/3f);
-			float rightPower = Mathf.Lerp(0f, 1f, rightModule.lastAcc.magnitude/3f);
+			float leftPower = Mathf.Lerp(0f, 1f, (leftModule.lastAcc.magnitude-1)/3f);
+			float rightPower = Mathf.Lerp(0f, 1f, (rightModule.lastAcc.magnitude-1)/3f);
 			
 			_throttle = (leftPower+rightPower)*0.5f;
 			
-			_steering = rightPower-leftPower;
+			_steering = leftPower - rightPower;
 			
             engine.Accelerate(_throttle);
             engine.Turn(_steering);

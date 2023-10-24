@@ -95,6 +95,10 @@ public class RabboniModule : MonoBehaviour
 	public UnityEvent disconnectedEvent;
 	public UnityEvent<Vector3, Vector3> IMUEvent;
 	
+	[Header("Event")]
+	public int batteryLevel;
+	public UnityEvent<int> batteryLevelEvent;
+	
 	public Text testLog;
 	
 	public string GetDeviceName()
@@ -114,6 +118,9 @@ public class RabboniModule : MonoBehaviour
 		{
 			statusStrLog.Invoke("Connected");
 			statusLog.Invoke( (int)state );
+			batteryLevelEvent.Invoke(batteryLevel);
+			
+			GetBatteryLevel();
 		}
 		else
 		{
@@ -407,7 +414,7 @@ public class RabboniModule : MonoBehaviour
 			statusStrLog.Invoke("Done setting");	
 			
 			Invoke("Subscribe", 0.3f);
-			Invoke("GetBatteryLevel", 1f);
+			Invoke("GetBatteryLevel", 0.5f);
 		});
 	}
 		
@@ -508,6 +515,9 @@ public class RabboniModule : MonoBehaviour
 			
 			// short tempVal = Convert.ToInt16(tempHex, 16);
 			// int batteryLevel = tempVal;
+			
+			batteryLevel = int.Parse(data);			
+			batteryLevelEvent.Invoke(batteryLevel);
 		});
 	}
 }
