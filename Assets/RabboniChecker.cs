@@ -30,6 +30,10 @@ public class RabboniChecker : MonoBehaviour
 
     void Update()
 	{
+		#if UNITY_EDITOR
+		startBtnObj.SetActive(true);
+		startHintObj.SetActive(false);
+		#else
 		if(CheckConditionReady())
 		{
 			startBtnObj.SetActive(true);
@@ -40,6 +44,7 @@ public class RabboniChecker : MonoBehaviour
 			startBtnObj.SetActive(false);
 			startHintObj.SetActive(true);
 		}
+		#endif
 	}
 	
 	public bool CheckConditionReady()

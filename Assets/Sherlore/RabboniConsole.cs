@@ -390,18 +390,18 @@ public class RabboniConsole : MonoBehaviour
 		isIntialized = false;
 		initializePanel.SetActive(false);
 		initializeBtn.SetActive(false);
-		statusText.text = "正在初始化藍牙...";
+		statusText.text = "Initializing bluetooth...";
 		
-		BluetoothLEHardwareInterface.Initialize (true, false, () => {
-			
+		BluetoothLEHardwareInterface.Initialize (true, false, () => 
+		{
 			initializePanel.SetActive(false);
 			initializeBtn.SetActive(false);
 			
 			isIntialized = true;
 
-		}, (error) => {
-			
-			statusText.text = "初始化失敗，請檢察藍牙是否開啟";
+		}, (error) => 
+		{
+			statusText.text = "Please check bluetooth";
 			initializePanel.SetActive(true);
 			initializeBtn.SetActive(true);
 			

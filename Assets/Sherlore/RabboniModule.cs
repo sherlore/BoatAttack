@@ -84,12 +84,9 @@ public class RabboniModule : MonoBehaviour
 	}	
 	
 	[Header("Log")]
-	public UnityEvent<string> addressLog;
 	public UnityEvent<string> statusStrLog;
-	// public UnityEvent<Color> statusColorLog;
 	public UnityEvent<int> statusLog;
 	
-	// public UnityEvent<bool> buttonSetSwitch;	
 	public UnityEvent<bool> buttonStopScanSwitch;
 	public UnityEvent<bool> buttonInterruptConnectSwitch;
 	
@@ -227,10 +224,6 @@ public class RabboniModule : MonoBehaviour
 
 					deviceType = RabboniConsole.DeviceType.Rabboni;
 					statusStrLog.Invoke("Found Rabboni");	
-										
-					state = State.Connecting;
-					statusLog.Invoke( (int)state );
-					statusStrLog.Invoke("Connecting...");	
 					
 					buttonStopScanSwitch.Invoke(false);
 					Invoke("Connect", 0.3f);
@@ -250,10 +243,6 @@ public class RabboniModule : MonoBehaviour
 
 					deviceType = RabboniConsole.DeviceType.Naxsen;
 					statusStrLog.Invoke("Found Naxsen");	
-										
-					state = State.Connecting;
-					statusLog.Invoke( (int)state );
-					statusStrLog.Invoke("Connecting...");
 					
 					buttonStopScanSwitch.Invoke(false);
 					Invoke("Connect", 0.3f);
@@ -265,8 +254,11 @@ public class RabboniModule : MonoBehaviour
 	}
 		
 	public void Connect()
-	{		
-		// buttonSetSwitch.Invoke(false);
+	{						
+		state = State.Connecting;
+		statusLog.Invoke( (int)state );
+		statusStrLog.Invoke("Connecting...");
+		
 		buttonInterruptConnectSwitch.Invoke(true);
 		
 		subscribeChecked = false;
@@ -275,7 +267,7 @@ public class RabboniModule : MonoBehaviour
 		BluetoothLEHardwareInterface.ConnectToPeripheral (targetAddress, null, null, (address, serviceUUID, characteristicUUID) => 
 		{
 			//Android / iOS return different UUID format, android give fullUUID, iOS give only UUID
-			testLog.text += String.Format("{0}x{1}\n", serviceUUID.Substring(0, 4), characteristicUUID.Substring(0, 4));
+			testLog.text += String.Format("{0}x{1}\n", serviceUUID.Substring(4, 4), characteristicUUID.Substring(4, 4));
 			
 			if (address == targetAddress)
 			{
@@ -300,7 +292,6 @@ public class RabboniModule : MonoBehaviour
 				{
 					statusStrLog.Invoke("Connection succeeded");	
 						
-					addressLog.Invoke(address);	
 					isConnected = true;
 					
 					buttonInterruptConnectSwitch.Invoke(false);
@@ -416,7 +407,7 @@ public class RabboniModule : MonoBehaviour
 			statusStrLog.Invoke("Done setting");	
 			
 			Invoke("Subscribe", 0.3f);
-			Invoke("GetBatteryLevel", 0.3f);
+			Invoke("GetBatteryLevel", 1f);
 		});
 	}
 		
@@ -515,10 +506,8 @@ public class RabboniModule : MonoBehaviour
 			string data = console.ByteArrayToString(bytes);
 			testLog.text += String.Format("BatteryLevel: {0}\n", data);	
 			
-			// if (BitConverter.IsLittleEndian)
-				// Array.Reverse(bytes); //need the bytes in the reverse order
-			int val = BitConverter.ToInt32(bytes, 0);
-			testLog.text += String.Format("BatteryLevel(val): {0}\n", val);	
+			// short tempVal = Convert.ToInt16(tempHex, 16);
+			// int batteryLevel = tempVal;
 		});
 	}
 }

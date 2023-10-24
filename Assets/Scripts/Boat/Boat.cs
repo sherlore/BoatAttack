@@ -77,6 +77,11 @@ namespace BoatAttack
                 _controller = gameObject.AddComponent(controllerType);
             }
         }
+		
+		public void EditEngine(float power)
+		{
+			engine.horsePower = power;
+		}
 
         private void Update()
         {

@@ -309,6 +309,9 @@ namespace BoatAttack
                 boat.SetController(boatLoading.Result, boatController);
                 boatController.Setup(i + 1, boat.human, boat.livery);
                 Instance._boatTimes.Add(i, 0f);
+				
+				if(!boat.human)
+					boatController.EditEngine(15f);
             }
 
         }

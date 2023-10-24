@@ -14,22 +14,31 @@ namespace BoatAttack
         public float _steering;
 
         private bool _paused;
+					
+		public RabboniModule leftModule;
+		public RabboniModule rightModule;
         
         private void Awake()
         {
             _controls = new InputControls();
             
-            _controls.BoatControls.Trottle.performed += context => _throttle = context.ReadValue<float>();
+            /*_controls.BoatControls.Trottle.performed += context => _throttle = context.ReadValue<float>();
             _controls.BoatControls.Trottle.canceled += context => _throttle = 0f;
             
             _controls.BoatControls.Steering.performed += context => _steering = context.ReadValue<float>();
-            _controls.BoatControls.Steering.canceled += context => _steering = 0f;
+            _controls.BoatControls.Steering.canceled += context => _steering = 0f;*/
 
             _controls.BoatControls.Reset.performed += ResetBoat;
             _controls.BoatControls.Pause.performed += FreezeBoat;
 
             _controls.DebugControls.TimeOfDay.performed += SelectTime;
         }
+		
+		void Start()
+		{
+			leftModule = RabboniConsole.instance.listDic["RabboniLeft"];
+			rightModule = RabboniConsole.instance.listDic["RabboniRight"];
+		}
 
         public override void OnEnable()
         {
@@ -69,6 +78,13 @@ namespace BoatAttack
 
         void FixedUpdate()
         {
+			float leftPower = Mathf.Lerp(0f, 1f, leftModule.lastAcc.magnitude/3f);
+			float rightPower = Mathf.Lerp(0f, 1f, rightModule.lastAcc.magnitude/3f);
+			
+			_throttle = (leftPower+rightPower)*0.5f;
+			
+			_steering = rightPower-leftPower;
+			
             engine.Accelerate(_throttle);
             engine.Turn(_steering);
         }
