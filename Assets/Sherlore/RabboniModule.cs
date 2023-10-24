@@ -418,10 +418,10 @@ public class RabboniModule : MonoBehaviour
 		{
 			statusStrLog.Invoke("Done setting");	
 			
-			//Invoke("Subscribe", 0.3f);
-			//Invoke("GetBatteryLevel", 1f);
+			Invoke("Subscribe", 0.3f);
+			Invoke("GetBatteryLevel", 1f);
 			//Invoke("GetBatteryLevel2", 2f);
-			Invoke("RequestMTU", 1f);
+			// Invoke("RequestMTU", 1f);
 		});
 	}
 		
@@ -513,7 +513,7 @@ public class RabboniModule : MonoBehaviour
 		connectedEvent.Invoke();
 	}
 
-	public void RequestMTU()
+	/*public void RequestMTU()
 	{
 		BluetoothLEHardwareInterface.RequestMtu(targetAddress, 185, (address, newMTU) =>
 		{
@@ -524,43 +524,22 @@ public class RabboniModule : MonoBehaviour
 			Invoke("GetBatteryLevel2", 5f);
 			//Invoke("RequestMTU", 1f);
 		});
-	}
+	}*/
 	
 	public void GetBatteryLevel()
 	{
 		testLog.text += String.Format("Fun: {0}\n", "GetBatteryLevel");
 
-
-		BluetoothLEHardwareInterface.ReadCharacteristic(targetAddress, console.FullUUID("180f"), console.FullUUID("2a19"), (characteristic, bytes) =>
-		{
-			testLog.text += String.Format("In: {0}\n", "GetBatteryLevel");
-			/*string data = console.ByteArrayToString(bytes);
-			testLog.text += String.Format("BatteryLevel: {0}\n", data);	
-			
-			// short tempVal = Convert.ToInt16(tempHex, 16);
-			// int batteryLevel = tempVal;
-			
-			batteryLevel = int.Parse(data);			
-			batteryLevelEvent.Invoke(batteryLevel);*/
-		});
-	}
-
-	public void GetBatteryLevel2()
-	{
-		testLog.text += String.Format("Fun: {0}\n", "GetBatteryLevel2");
-
-
 		BluetoothLEHardwareInterface.ReadCharacteristic(targetAddress, "180f", "2a19", (characteristic, bytes) =>
 		{
-			testLog.text += String.Format("In: {0}\n", "GetBatteryLevel2");
-			/*string data = console.ByteArrayToString(bytes);
-			testLog.text += String.Format("BatteryLevel: {0}\n", data);	
+			testLog.text += String.Format("In: {0}\n", "GetBatteryLevel");
+			string tempHex = console.ByteArrayToString(bytes);
+			testLog.text += String.Format("BatteryLevel: {0}\n", tempHex);	
 			
-			// short tempVal = Convert.ToInt16(tempHex, 16);
-			// int batteryLevel = tempVal;
+			short tempVal = Convert.ToInt16(tempHex, 16);
 			
-			batteryLevel = int.Parse(data);			
-			batteryLevelEvent.Invoke(batteryLevel);*/
+			batteryLevel = tempVal;			
+			batteryLevelEvent.Invoke(batteryLevel);
 		});
 	}
 }
