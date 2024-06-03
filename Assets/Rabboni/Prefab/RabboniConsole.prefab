@@ -1,0 +1,268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4289989755715043433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4289989755715043434}
+  - component: {fileID: 4289989755715043435}
+  - component: {fileID: 8389071920412762239}
+  m_Layer: 0
+  m_Name: RabboniModule FL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4289989755715043434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289989755715043433}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4289989756137510887}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4289989755715043435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289989755715043433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d631a9d558d04fa419aa276609f88584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  console: {fileID: 4289989756137510886}
+  state: 0
+  targetAddress: 
+  deviceId: FL
+  deviceType: 0
+  subscribeChecked: 0
+  prefsChecked: 0
+  isConnected: 0
+  _accScale: 2
+  _lastAcc: {x: 0, y: 0, z: 0}
+  _gyroScale: 1000
+  _lastGyro: {x: 0, y: 0, z: 0}
+  statusStrLog:
+    m_PersistentCalls:
+      m_Calls: []
+  statusLog:
+    m_PersistentCalls:
+      m_Calls: []
+  buttonStopScanSwitch:
+    m_PersistentCalls:
+      m_Calls: []
+  buttonInterruptConnectSwitch:
+    m_PersistentCalls:
+      m_Calls: []
+  connectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  disconnectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  IMUEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  batteryLevel: 0
+  batteryLevelEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  rabboniKalman: {fileID: 8389071920412762239}
+  simulationAcc: {x: 0, y: 1, z: 0}
+  simulationGyro: {x: 0, y: 0, z: 0}
+--- !u!114 &8389071920412762239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289989755715043433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe31b134d275e3449c82a5fb4a05643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kalmanRotation: {x: 0, y: 0, z: 0, w: 1}
+--- !u!1 &4289989756137510884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4289989756137510887}
+  - component: {fileID: 4289989756137510886}
+  m_Layer: 0
+  m_Name: RabboniConsole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4289989756137510887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289989756137510884}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4289989755715043434}
+  - {fileID: 2768588488824037972}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4289989756137510886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289989756137510884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47b17e4f70a5ca48bf0b9ffbace533c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeviceNameRabboni:
+  - Rabboni
+  - rabboni
+  - RABBONI
+  DeviceNameNaxsen:
+  - Naxsen
+  - NAXSEN
+  SubscribeServiceUUID: 1600
+  SubscribeCharacteristic: 1601
+  PrefsServiceUUID: fff0
+  PrefsCharacteristic: fff6
+  isIntialized: 0
+  initializeSuccessEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  initializeFailedLog:
+    m_PersistentCalls:
+      m_Calls: []
+  rabboniModules:
+  - {fileID: 4289989755715043435}
+  - {fileID: 5772738174201330658}
+  accScale: 3
+  gyroScale: 3
+  dataRate: 1
+--- !u!1 &5163735360781120067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2768588488824037972}
+  - component: {fileID: 5772738174201330658}
+  - component: {fileID: 934044285326956380}
+  m_Layer: 0
+  m_Name: RabboniModule FR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2768588488824037972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5163735360781120067}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4289989756137510887}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5772738174201330658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5163735360781120067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d631a9d558d04fa419aa276609f88584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  console: {fileID: 4289989756137510886}
+  state: 0
+  targetAddress: 
+  deviceId: FR
+  deviceType: 0
+  subscribeChecked: 0
+  prefsChecked: 0
+  isConnected: 0
+  _accScale: 2
+  _lastAcc: {x: 0, y: 0, z: 0}
+  _gyroScale: 1000
+  _lastGyro: {x: 0, y: 0, z: 0}
+  statusStrLog:
+    m_PersistentCalls:
+      m_Calls: []
+  statusLog:
+    m_PersistentCalls:
+      m_Calls: []
+  buttonStopScanSwitch:
+    m_PersistentCalls:
+      m_Calls: []
+  buttonInterruptConnectSwitch:
+    m_PersistentCalls:
+      m_Calls: []
+  connectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  disconnectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  IMUEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  batteryLevel: 0
+  batteryLevelEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  rabboniKalman: {fileID: 934044285326956380}
+  simulationAcc: {x: 0, y: 1, z: 0}
+  simulationGyro: {x: 0, y: 0, z: 0}
+--- !u!114 &934044285326956380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5163735360781120067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe31b134d275e3449c82a5fb4a05643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kalmanRotation: {x: 0, y: 0, z: 0, w: 1}
