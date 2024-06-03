@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="LightContainer">
+        <ui:Foldout text="Standard Color">
+            <ui:MultiColumnListView name="Light_StandardColor" fixed-item-height="20">
+                <ui:Columns>
+                    <ui:Column name="key" title="Key" width="180" />
+                    <ui:Column name="color" title="Color" width="180" />
+                </ui:Columns>
+            </ui:MultiColumnListView>
+        </ui:Foldout>
+        <ui:Foldout text="Custom Color">
+            <ui:MultiColumnListView name="Light_CustomColor" fixed-item-height="20">
+                <ui:Columns>
+                    <ui:Column name="key" title="Key" width="180" />
+                    <ui:Column name="color" title="Color" width="180" />
+                </ui:Columns>
+            </ui:MultiColumnListView>
+        </ui:Foldout>
+    </ui:VisualElement>
+    <ui:VisualElement name="DarkContainer">
+        <ui:Foldout text="Standard Color">
+            <ui:MultiColumnListView name="Dark_StandardColor" fixed-item-height="20">
+                <ui:Columns>
+                    <ui:Column name="key" title="Key" width="180" />
+                    <ui:Column name="color" title="Color" width="180" />
+                </ui:Columns>
+            </ui:MultiColumnListView>
+        </ui:Foldout>
+        <ui:Foldout text="Custom Color">
+            <ui:MultiColumnListView name="Dark_CustomColor" fixed-item-height="20">
+                <ui:Columns>
+                    <ui:Column name="key" title="Key" width="180" />
+                    <ui:Column name="color" title="Color" width="180" />
+                </ui:Columns>
+            </ui:MultiColumnListView>
+        </ui:Foldout>
+    </ui:VisualElement>
+</ui:UXML>

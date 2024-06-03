@@ -12,6 +12,7 @@ TagManager:
   - volume_manager
   - benchmark_flythrough
   - console_canvas
+  - Goal
   layers:
   - Default
   - TransparentFX

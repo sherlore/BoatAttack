@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9700221e963b91d4ca2d806baa3baced, type: 3}
+  m_Name: ThemeBuilder
+  m_EditorClassIdentifier: 
+  themeFile: {fileID: 11400000, guid: 5660fb4e858f0f144a956ca19e50add1, type: 2}
+  lightColorPaletteJson: "\"primary\": \"#116682\",\n            \"surfaceTint\":
+    \"#116682\",\n            \"onPrimary\": \"#FFFFFF\",\n            \"primaryContainer\":
+    \"#BDE9FF\",\n            \"onPrimaryContainer\": \"#001F2A\",\n            \"secondary\":
+    \"#4D616C\",\n            \"onSecondary\": \"#FFFFFF\",\n            \"secondaryContainer\":
+    \"#D0E6F2\",\n            \"onSecondaryContainer\": \"#081E27\",\n           
+    \"tertiary\": \"#5D5B7D\",\n            \"onTertiary\": \"#FFFFFF\",\n           
+    \"tertiaryContainer\": \"#E3DFFF\",\n            \"onTertiaryContainer\": \"#191836\",\n           
+    \"error\": \"#BA1A1A\",\n            \"onError\": \"#FFFFFF\",\n            \"errorContainer\":
+    \"#FFDAD6\",\n            \"onErrorContainer\": \"#410002\",\n            \"background\":
+    \"#F6FAFD\",\n            \"onBackground\": \"#171C1F\",\n            \"surface\":
+    \"#F6FAFD\",\n            \"onSurface\": \"#171C1F\",\n            \"surfaceVariant\":
+    \"#DCE4E9\",\n            \"onSurfaceVariant\": \"#40484C\",\n            \"outline\":
+    \"#70787D\",\n            \"outlineVariant\": \"#C0C8CD\",\n            \"shadow\":
+    \"#000000\",\n            \"scrim\": \"#000000\",\n            \"inverseSurface\":
+    \"#2C3134\",\n            \"inverseOnSurface\": \"#EDF1F5\",\n            \"inversePrimary\":
+    \"#8BD0EF\",\n            \"primaryFixed\": \"#BDE9FF\",\n            \"onPrimaryFixed\":
+    \"#001F2A\",\n            \"primaryFixedDim\": \"#8BD0EF\",\n            \"onPrimaryFixedVariant\":
+    \"#004D64\",\n            \"secondaryFixed\": \"#D0E6F2\",\n            \"onSecondaryFixed\":
+    \"#081E27\",\n            \"secondaryFixedDim\": \"#B4CAD6\",\n            \"onSecondaryFixedVariant\":
+    \"#354A53\",\n            \"tertiaryFixed\": \"#E3DFFF\",\n            \"onTertiaryFixed\":
+    \"#191836\",\n            \"tertiaryFixedDim\": \"#C6C2EA\",\n            \"onTertiaryFixedVariant\":
+    \"#454364\",\n            \"surfaceDim\": \"#D6DBDE\",\n            \"surfaceBright\":
+    \"#F6FAFD\",\n            \"surfaceContainerLowest\": \"#FFFFFF\",\n           
+    \"surfaceContainerLow\": \"#F0F4F8\",\n            \"surfaceContainer\": \"#EAEEF2\",\n           
+    \"surfaceContainerHigh\": \"#E4E9EC\",\n            \"surfaceContainerHighest\":
+    \"#DFE3E7\""
+  darkColorPaletteJson: "\"primary\": \"#8BD0EF\",\n            \"surfaceTint\":
+    \"#8BD0EF\",\n            \"onPrimary\": \"#003546\",\n            \"primaryContainer\":
+    \"#004D64\",\n            \"onPrimaryContainer\": \"#BDE9FF\",\n            \"secondary\":
+    \"#B4CAD6\",\n            \"onSecondary\": \"#1F333C\",\n            \"secondaryContainer\":
+    \"#354A53\",\n            \"onSecondaryContainer\": \"#D0E6F2\",\n           
+    \"tertiary\": \"#C6C2EA\",\n            \"onTertiary\": \"#2E2D4D\",\n           
+    \"tertiaryContainer\": \"#454364\",\n            \"onTertiaryContainer\": \"#E3DFFF\",\n           
+    \"error\": \"#FFB4AB\",\n            \"onError\": \"#690005\",\n            \"errorContainer\":
+    \"#93000A\",\n            \"onErrorContainer\": \"#FFDAD6\",\n            \"background\":
+    \"#0F1417\",\n            \"onBackground\": \"#DFE3E7\",\n            \"surface\":
+    \"#0F1417\",\n            \"onSurface\": \"#DFE3E7\",\n            \"surfaceVariant\":
+    \"#40484C\",\n            \"onSurfaceVariant\": \"#C0C8CD\",\n            \"outline\":
+    \"#8A9297\",\n            \"outlineVariant\": \"#40484C\",\n            \"shadow\":
+    \"#000000\",\n            \"scrim\": \"#000000\",\n            \"inverseSurface\":
+    \"#DFE3E7\",\n            \"inverseOnSurface\": \"#2C3134\",\n            \"inversePrimary\":
+    \"#116682\",\n            \"primaryFixed\": \"#BDE9FF\",\n            \"onPrimaryFixed\":
+    \"#001F2A\",\n            \"primaryFixedDim\": \"#8BD0EF\",\n            \"onPrimaryFixedVariant\":
+    \"#004D64\",\n            \"secondaryFixed\": \"#D0E6F2\",\n            \"onSecondaryFixed\":
+    \"#081E27\",\n            \"secondaryFixedDim\": \"#B4CAD6\",\n            \"onSecondaryFixedVariant\":
+    \"#354A53\",\n            \"tertiaryFixed\": \"#E3DFFF\",\n            \"onTertiaryFixed\":
+    \"#191836\",\n            \"tertiaryFixedDim\": \"#C6C2EA\",\n            \"onTertiaryFixedVariant\":
+    \"#454364\",\n            \"surfaceDim\": \"#0F1417\",\n            \"surfaceBright\":
+    \"#353A3D\",\n            \"surfaceContainerLowest\": \"#0A0F11\",\n           
+    \"surfaceContainerLow\": \"#171C1F\",\n            \"surfaceContainer\": \"#1B2023\",\n           
+    \"surfaceContainerHigh\": \"#262B2D\",\n            \"surfaceContainerHighest\":
+    \"#303538\""

@@ -898,6 +898,7 @@ PlayerSettings:
     8: URP;USE_CUSTOM_METADATA
     9: URP;USE_CUSTOM_METADATA
     Android: LETAI_TRUESHADOW
+    Standalone: LETAI_TRUESHADOW
   additionalCompilerArguments: {}
   platformArchitecture:
     iPhone: 1

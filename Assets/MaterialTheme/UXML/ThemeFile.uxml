@@ -1,0 +1,36 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Label tabindex="-1" text="Light Theme" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-typography-style: bold; typography-size: 16px; margin-bottom: 5px; align-items: stretch; -unity-text-align: upper-center;" />
+    <ui:Foldout text="Standard Color" style="margin-top: 10px; typography-size: 12px;">
+        <ui:MultiColumnListView name="lightStandardColor" fixed-item-height="20">
+            <ui:Columns>
+                <ui:Column name="key" title="Key" width="180" />
+                <ui:Column name="color" title="Color" width="180" />
+            </ui:Columns>
+        </ui:MultiColumnListView>
+    </ui:Foldout>
+    <ui:Foldout text="Custom Color" style="typography-size: 12px; margin-top: 10px;">
+        <ui:MultiColumnListView name="lightCustomColor" fixed-item-height="20">
+            <ui:Columns>
+                <ui:Column name="key" title="Key" width="180" />
+                <ui:Column name="color" title="Color" width="180" />
+            </ui:Columns>
+        </ui:MultiColumnListView>
+    </ui:Foldout>
+    <ui:Label tabindex="-1" text="Dark Theme" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="-unity-typography-style: bold; typography-size: 16px; margin-bottom: 5px; align-items: stretch; -unity-text-align: upper-center; margin-top: 20px;" />
+    <ui:Foldout text="Standard Color" style="typography-size: 12px; -unity-text-align: upper-left; -unity-typography-style: normal; margin-top: 10px;">
+        <ui:MultiColumnListView name="darkStandardColor" fixed-item-height="20">
+            <ui:Columns>
+                <ui:Column name="key" title="Key" width="180" />
+                <ui:Column name="color" title="Color" width="180" />
+            </ui:Columns>
+        </ui:MultiColumnListView>
+    </ui:Foldout>
+    <ui:Foldout text="Custom Color" style="typography-size: 12px; margin-top: 10px;">
+        <ui:MultiColumnListView name="darkCustomColor" fixed-item-height="20">
+            <ui:Columns>
+                <ui:Column name="key" title="Key" width="180" />
+                <ui:Column name="color" title="Color" width="180" />
+            </ui:Columns>
+        </ui:MultiColumnListView>
+    </ui:Foldout>
+</ui:UXML>

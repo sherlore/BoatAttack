@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baee2718fb2e1404ca143e9383846fff, type: 3}
+  m_Name: ThemeConfig
+  m_EditorClassIdentifier: 
+  themeMode: 1
+  useDynamicTheme: 1
+  themeFile: {fileID: 11400000, guid: 25873e2e2db88334b9540ae64a1df03d, type: 2}
+  colorOptions:
+  - Default
+  - primary
+  - surfaceTint
+  - onPrimary
+  - primaryContainer
+  - onPrimaryContainer
+  - secondary
+  - onSecondary
+  - secondaryContainer
+  - onSecondaryContainer
+  - tertiary
+  - onTertiary
+  - tertiaryContainer
+  - onTertiaryContainer
+  - error
+  - onError
+  - errorContainer
+  - onErrorContainer
+  - background
+  - onBackground
+  - surface
+  - onSurface
+  - surfaceVariant
+  - onSurfaceVariant
+  - outline
+  - outlineVariant
+  - shadow
+  - scrim
+  - inverseSurface
+  - inverseOnSurface
+  - inversePrimary
+  - primaryFixed
+  - onPrimaryFixed
+  - primaryFixedDim
+  - onPrimaryFixedVariant
+  - secondaryFixed
+  - onSecondaryFixed
+  - secondaryFixedDim
+  - onSecondaryFixedVariant
+  - tertiaryFixed
+  - onTertiaryFixed
+  - tertiaryFixedDim
+  - onTertiaryFixedVariant
+  - surfaceDim
+  - surfaceBright
+  - surfaceContainerLowest
+  - surfaceContainerLow
+  - surfaceContainer
+  - surfaceContainerHigh
+  - surfaceContainerHighest
+  - Custom_Orange
+  - Custom_Green
+  - Custom_Purple
+  - Custom_Lemon
+  defaultTypographyAttr:
+    fontAsset: {fileID: 11400000, guid: e44d881be54d4fe4996ec87b365a6345, type: 2}
+    fontSize: 20
+  typographyOptions:
+  - Default
+  - Display Large
+  - Display Medium
+  - Display Small
+  - Headline Large
+  - Headline Medium
+  - Headline Small
+  - Title Large
+  - Title Medium
+  - Title Small
+  - Body Large
+  - Body Medium
+  - Body Small
+  - Label Large
+  - Label Medium
+  - Label Small
