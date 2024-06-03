@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,15 +30,15 @@ public class RaceResult : MonoBehaviour
 		{
 			if(i==playerRank)
 			{
-				playerPrefab.transform.SetAsLastSibling();
-				playerItem.UpdateData(i, leaderboard.recordList[i].playerName, leaderboard.recordList[i].raceRecord);
+				playerItem.transform.SetAsLastSibling();
+				playerItem.UpdateData(i+1, leaderboard.recordList[i].playerName, leaderboard.recordList[i].raceRecord);
 			}
 			else
 			{
 				GameObject itemObj = Instantiate<GameObject>(itemPrefab, itemParent);
 				
 				RankItem rankItem = itemObj.GetComponent<RankItem>();
-				rankItem.UpdateData(i, leaderboard.recordList[i].playerName, leaderboard.recordList[i].raceRecord);
+				rankItem.UpdateData(i+1, leaderboard.recordList[i].playerName, leaderboard.recordList[i].raceRecord);
 				
 				itemObj.SetActive(true);
 			}
