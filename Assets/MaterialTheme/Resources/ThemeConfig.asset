@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   themeMode: 1
   useDynamicTheme: 1
-  themeFile: {fileID: 11400000, guid: 25873e2e2db88334b9540ae64a1df03d, type: 2}
+  themeFile: {fileID: 11400000, guid: e765e489ecdd45545a17af6bf1ed15e3, type: 2}
   colorOptions:
   - Default
   - primary
