@@ -15,12 +15,32 @@ public class GameConsole : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(StartGameFlow());
+        StartCoroutine(StartGameFlow());
     }
 	
 	public void ReachGoal()
 	{
 		Debug.Log("ReachGoal");
+		
+		endEvent.Invoke();
+	}
+	
+	public void GamePause()
+	{
+		Time.timeScale = 0f;
+	}
+	
+	public void GameResume()
+	{
+		Time.timeScale = 1f;
+	}
+	
+	void OnDestroy()
+	{
+		if(Time.timeScale != 1f)
+		{
+			Time.timeScale = 1f;
+		}
 	}
 	
 	IEnumerator StartGameFlow()
@@ -36,8 +56,14 @@ public class GameConsole : MonoBehaviour
 
             yield return null;
         }
+		
+		countDownText.text = "<size=70%>GO!!</size>";
 
         //Start Game
         startEvent.Invoke();
+		
+		yield return new WaitForSeconds(1.5f);
+		
+		countDownText.gameObject.SetActive(false);
     }
 }

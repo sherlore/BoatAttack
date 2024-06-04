@@ -291,3 +291,7 @@ MonoBehaviour:
     typographyAttr:
       fontAsset: {fileID: 11400000, guid: e44d881be54d4fe4996ec87b365a6345, type: 2}
       fontSize: 16
+  - key: GameCountDown
+    typographyAttr:
+      fontAsset: {fileID: 11400000, guid: e44d881be54d4fe4996ec87b365a6345, type: 2}
+      fontSize: 200

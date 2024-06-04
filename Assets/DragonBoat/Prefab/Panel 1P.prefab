@@ -131,8 +131,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280950029
-  m_fontColor: {r: 0.050980393, g: 0.11372549, b: 0.16470589, a: 1}
+    rgba: 4279375148
+  m_fontColor: {r: 0.17254902, g: 0.08235294, b: 0.07058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -297,8 +297,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280294424
-  m_fontColor: {r: 0.09411765, g: 0.10980392, b: 0.1254902, a: 1}
+    rgba: 4279769379
+  m_fontColor: {r: 0.13725491, g: 0.09803922, b: 0.09411765, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -464,8 +464,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283320130
-  m_fontColor: {r: 0.25882354, g: 0.2784314, b: 0.30588236, a: 1}
+    rgba: 4282467155
+  m_fontColor: {r: 0.3254902, g: 0.2627451, b: 0.25490198, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.83137256, g: 0.89411765, b: 0.9647059, a: 1}
+  m_Color: {r: 1, g: 0.85490197, b: 0.8352941, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -712,6 +712,7 @@ GameObject:
   - component: {fileID: 6747375498575777275}
   - component: {fileID: 6747375498575777220}
   - component: {fileID: 6747375498575777221}
+  - component: {fileID: 9089592584506043884}
   m_Layer: 5
   m_Name: InputField (TMP)
   m_TagString: Untagged
@@ -761,7 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8784314, g: 0.8862745, b: 0.9098039, a: 1}
+  m_Color: {r: 0.94509804, g: 0.87058824, b: 0.8627451, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -839,7 +840,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9089592584506043884}
+        m_TargetAssemblyTypeName: InputFieldPrefsString, Assembly-CSharp
+        m_MethodName: OnReceuveInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -890,6 +903,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_key: surfaceContainerHighest
   graphic: {fileID: 6747375498575777275}
+--- !u!114 &9089592584506043884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747375498575777223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90f0aa8618c8054a97ce3ace2d90e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 6747375498575777220}
+  initWithPrefs: 1
+  prefsKey: 
+  defaultValue: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6747375498394516751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -897,6 +929,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6747375498308080018}
     m_Modifications:
+    - target: {fileID: 553027121327351757, guid: af6d6bc6738e46b41bfee4c08bfed9d1,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279769379
+      objectReference: {fileID: 0}
     - target: {fileID: 3032075886984789708, guid: af6d6bc6738e46b41bfee4c08bfed9d1,
         type: 3}
       propertyPath: m_RootOrder
@@ -1063,6 +1100,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8432501020874811911, guid: af6d6bc6738e46b41bfee4c08bfed9d1,
+        type: 3}
+      propertyPath: rabboniModuleId
+      value: 1PL
+      objectReference: {fileID: 0}
     - target: {fileID: 8660342906239654235, guid: af6d6bc6738e46b41bfee4c08bfed9d1,
         type: 3}
       propertyPath: m_text
@@ -1077,6 +1119,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660342906239654235, guid: af6d6bc6738e46b41bfee4c08bfed9d1,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279769379
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af6d6bc6738e46b41bfee4c08bfed9d1, type: 3}
@@ -1093,6 +1140,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6747375498308080018}
     m_Modifications:
+    - target: {fileID: 553027121327351757, guid: af6d6bc6738e46b41bfee4c08bfed9d1,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279769379
+      objectReference: {fileID: 0}
     - target: {fileID: 3032075886984789708, guid: af6d6bc6738e46b41bfee4c08bfed9d1,
         type: 3}
       propertyPath: m_RootOrder
@@ -1254,6 +1306,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9d987424469639345bde9c5142a994c6,
         type: 3}
+    - target: {fileID: 8432501020874811911, guid: af6d6bc6738e46b41bfee4c08bfed9d1,
+        type: 3}
+      propertyPath: rabboniModuleId
+      value: 1PR
+      objectReference: {fileID: 0}
     - target: {fileID: 8660342906239654235, guid: af6d6bc6738e46b41bfee4c08bfed9d1,
         type: 3}
       propertyPath: m_text
@@ -1268,6 +1325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660342906239654235, guid: af6d6bc6738e46b41bfee4c08bfed9d1,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279769379
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af6d6bc6738e46b41bfee4c08bfed9d1, type: 3}

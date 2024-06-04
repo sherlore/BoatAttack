@@ -9,6 +9,7 @@ public class MatchConsole : MonoBehaviour
 	
     public void SetMatchWinner(int playerIndex)
     {
+		PlayerPrefs.SetString( "LatestStage", stageName );
         PlayerPrefs.SetInt(String.Format("MatchResultWinner_{0}", stageName), playerIndex);
     }
 }

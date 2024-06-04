@@ -6,34 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 5b04525e06050a0e5c565b71497159441016487b287877677d2c4962b4b43768
-      flags: 0
-    RecentlyUsedSceneGuid-1:
       value: 5704575606540f025d565520137b0744454e1d727e2c236874784565b1b83239
       flags: 0
-    RecentlyUsedSceneGuid-2:
+    RecentlyUsedSceneGuid-1:
       value: 0009035452530a0d0c57087513725d4412154e2b7e2d726528791e6ae7b0673d
       flags: 0
-    RecentlyUsedSceneGuid-3:
+    RecentlyUsedSceneGuid-2:
       value: 570302515c0408085b5b097643210c44434e1e792d7f7262282c4b63b6e4323c
       flags: 0
+    RecentlyUsedSceneGuid-3:
+      value: 0206565f03540a590c08587b46265c441316407f752c71367c711861e0e26c69
+      flags: 0
     RecentlyUsedSceneGuid-4:
-      value: 54010d5e07000b08080d542013725b44474e1b7d7f2b7f697e7e4c62e1b9673c
-      flags: 0
-    RecentlyUsedSceneGuid-5:
-      value: 5a08065501010a0a555b0d2449210b444215482c7b2d7f652e2c4d64b5e6606c
-      flags: 0
-    RecentlyUsedSceneGuid-6:
-      value: 575202040050515f545c0a7514250a44434e1d7f797b7161787f4d30bab8326d
-      flags: 0
-    RecentlyUsedSceneGuid-7:
       value: 5a02570351570f0a5b0c5b264275594440151c72757976317d2f4837e1b3676b
       flags: 0
-    RecentlyUsedSceneGuid-8:
+    RecentlyUsedSceneGuid-5:
+      value: 575202040050515f545c0a7514250a44434e1d7f797b7161787f4d30bab8326d
+      flags: 0
+    RecentlyUsedSceneGuid-6:
       value: 01090c055c51590a0f0b5827147b0d44414e1e2e2e7d76672b7c1e63e6b5673e
       flags: 0
-    RecentlyUsedSceneGuid-9:
+    RecentlyUsedSceneGuid-7:
+      value: 5a08065501010a0a555b0d2449210b444215482c7b2d7f652e2c4d64b5e6606c
+      flags: 0
+    RecentlyUsedSceneGuid-8:
       value: 5a060d005553580b0e085d7311215e4414154c7c2d2a7f682b714b36b4b8323c
+      flags: 0
+    RecentlyUsedSceneGuid-9:
+      value: 54010d5e07000b08080d542013725b44474e1b7d7f2b7f697e7e4c62e1b9673c
       flags: 0
     RecentlyUsedScenePath-0:
       value: 22424703114646480e0b0227036c4c04170311291301353c2c27197df7ee3d2cfb

@@ -23,4 +23,21 @@ public class PlayerConsole : MonoBehaviour
 
         distanceEvent.Invoke( 1f-dis/maxDistance);
     }
+	
+	public void ResetPosition()
+	{
+		Debug.Log("ResetPosition");
+		
+		float dis = Vector3.Distance(goalTransform.position, boatTransform.position);
+		
+		float resetDistance = dis+20f;
+		
+		if(resetDistance > maxDistance)
+		{
+			resetDistance = maxDistance;
+		}
+		
+		boatTransform.position = goalTransform.position + goalTransform.forward * resetDistance * -1f;
+		boatTransform.rotation = goalTransform.rotation;
+	}
 }

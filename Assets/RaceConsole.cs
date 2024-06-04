@@ -13,7 +13,7 @@ public class RaceConsole : MonoBehaviour
 	
 	void Start()
 	{
-		playerName = PlayerPrefs.GetString("RacePlayerName", "神秘玩家");
+		playerName = PlayerPrefs.GetString("RacePlayerName", "神秘隊伍");
 	}
 	
     public void StartRace()
@@ -23,6 +23,8 @@ public class RaceConsole : MonoBehaviour
 
     public void FinishRace()
     {
+		PlayerPrefs.SetString( "LatestStage", stageName );
+		
         float totalTime = Time.time - startMoment;
 		
 		//Check Best Time
@@ -49,7 +51,7 @@ public class RaceConsole : MonoBehaviour
 		
 		string leaderboardKey = String.Format("Leaderboard_{0}", stageName);
 		string leaderboardStr = PlayerPrefs.GetString( leaderboardKey, String.Empty);	
-		RaceLeaderboard leaderboard = String.IsNullOrEmpty(bestStr)? new RaceLeaderboard() : RaceLeaderboard.CreateFromJSON(leaderboardStr);
+		RaceLeaderboard leaderboard = String.IsNullOrEmpty(leaderboardStr)? new RaceLeaderboard() : RaceLeaderboard.CreateFromJSON(leaderboardStr);
 		
 		int rankIndex=0;
 		

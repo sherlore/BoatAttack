@@ -7,6 +7,11 @@ public class RaceLeaderboard
 {
 	public List<RaceRecord> recordList;
 	
+	public RaceLeaderboard()
+	{
+		recordList = new List<RaceRecord>();
+	}
+	
 	public static RaceLeaderboard CreateFromJSON(string jsonString)
 	{
 		return JsonUtility.FromJson<RaceLeaderboard>(jsonString);
