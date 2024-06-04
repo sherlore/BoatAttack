@@ -265,7 +265,7 @@ MonoBehaviour:
   rabboniModules:
   - {fileID: 4289989755715043435}
   - {fileID: 5772738174201330658}
-  accScale: 3
+  accScale: 1
   gyroScale: 3
   dataRate: 1
 --- !u!1 &5163735360781120067

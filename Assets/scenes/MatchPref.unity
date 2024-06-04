@@ -16430,6 +16430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6259123595015611021, guid: 7dcdf0103160fff498daa986662d7c9d,
         type: 3}
+      propertyPath: _isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259123595015611021, guid: 7dcdf0103160fff498daa986662d7c9d,
+        type: 3}
       propertyPath: goalEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -21138,6 +21143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DragonBoat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259123595015611021, guid: 7dcdf0103160fff498daa986662d7c9d,
+        type: 3}
+      propertyPath: _isActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6259123595015611021, guid: 7dcdf0103160fff498daa986662d7c9d,
         type: 3}
