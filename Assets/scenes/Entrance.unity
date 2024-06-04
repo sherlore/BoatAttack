@@ -185,7 +185,7 @@ PrefabInstance:
     - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
         type: 3}
       propertyPath: initializeFailedLog.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
         type: 3}
@@ -199,9 +199,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
         type: 3}
+      propertyPath: initializeFailedLog.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
+        type: 3}
       propertyPath: initializeFailedLog.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2081134598}
+    - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
+        type: 3}
+      propertyPath: initializeFailedLog.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1547675241}
     - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
         type: 3}
       propertyPath: initializeSuccessEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -214,12 +224,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
         type: 3}
+      propertyPath: initializeFailedLog.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
+        type: 3}
       propertyPath: initializeSuccessEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1547675241}
     - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
         type: 3}
       propertyPath: initializeFailedLog.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
+        type: 3}
+      propertyPath: initializeFailedLog.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
@@ -239,8 +259,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
         type: 3}
+      propertyPath: initializeFailedLog.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
+        type: 3}
       propertyPath: initializeFailedLog.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
+        type: 3}
+      propertyPath: initializeFailedLog.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
         type: 3}
@@ -255,6 +285,11 @@ PrefabInstance:
     - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
         type: 3}
       propertyPath: initializeFailedLog.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
+        type: 3}
+      propertyPath: initializeFailedLog.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4289989756137510886, guid: 7068d471f82e50d4ca6eaf17c9e77d27,
@@ -929,7 +964,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 674709262}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2715,7 +2750,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 371215118}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3230,7 +3265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1547675242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22039,7 +22074,7 @@ MonoBehaviour:
       x: 0
       y: 0
     onmiDir: 0
-  - amplitude: 0.2336182
+  - amplitude: 0.23361821
     direction: -264.46985
     wavelength: 3.8296328
     origin:
@@ -22074,7 +22109,7 @@ MonoBehaviour:
       x: 0
       y: 0
     onmiDir: 0
-  - amplitude: 0.45657623
+  - amplitude: 0.45657626
     direction: -264.3355
     wavelength: 5.834793
     origin:

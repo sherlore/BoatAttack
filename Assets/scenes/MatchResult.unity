@@ -9302,7 +9302,7 @@ MonoBehaviour:
       x: 0
       y: 0
     onmiDir: 0
-  - amplitude: 0.2336182
+  - amplitude: 0.23361821
     direction: -264.46985
     wavelength: 3.8296328
     origin:
@@ -9337,7 +9337,7 @@ MonoBehaviour:
       x: 0
       y: 0
     onmiDir: 0
-  - amplitude: 0.45657623
+  - amplitude: 0.45657626
     direction: -264.3355
     wavelength: 5.834793
     origin:

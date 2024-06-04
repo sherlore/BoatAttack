@@ -167,7 +167,7 @@ PlayerSettings:
     Android: com.Sherlore.DragonBoat
     Lumin: com.DefaultCompany.BoatAttack
     Standalone: com.UnityTechnologies.BoatAttack
-    iPhone: com.Unity3D.BoatAttack
+    iPhone: com.Sherlore.DragonBoat
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -240,7 +240,7 @@ PlayerSettings:
   metalAPIValidation: 1
   iOSRenderExtraFrameOnPause: 0
   iosCopyPluginsCodeInsteadOfSymlink: 0
-  appleDeveloperTeamID: BVPN9UFA9B
+  appleDeveloperTeamID: 3KM9ZLQFYA
   iOSManualSigningProvisioningProfileID: 
   tvOSManualSigningProvisioningProfileID: 
   iOSManualSigningProvisioningProfileType: 0
@@ -615,7 +615,7 @@ PlayerSettings:
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
   cameraUsageDescription: 
-  locationUsageDescription: 
+  locationUsageDescription: BLE
   microphoneUsageDescription: 
   bluetoothUsageDescription: 
   switchNMETAOverride: 
@@ -899,6 +899,7 @@ PlayerSettings:
     9: URP;USE_CUSTOM_METADATA
     Android: LETAI_TRUESHADOW
     Standalone: LETAI_TRUESHADOW
+    iPhone: LETAI_TRUESHADOW
   additionalCompilerArguments: {}
   platformArchitecture:
     iPhone: 1
