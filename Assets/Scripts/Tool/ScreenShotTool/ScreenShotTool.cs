@@ -6,10 +6,19 @@ using UnityEngine;
 public class ScreenShotTool : MonoBehaviour
 {
 	#if UNITY_EDITOR
+	public static ScreenShotTool instance;
 	
 	void Start()
 	{
-		DontDestroyOnLoad(gameObject);
+		if(instance == null)
+		{
+			instance = this;
+			DontDestroyOnLoad(gameObject);
+		}
+		else
+		{
+			Destroy(gameObject);
+		}
 	}
 		
 	public void SreenShot()

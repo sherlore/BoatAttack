@@ -23,7 +23,7 @@ public abstract class BaseTypographyBinder : MonoBehaviour
 	
     protected virtual void Awake()
 	{
-		Debug.Log("BaseTypographyBinder/Awake");
+		// Debug.Log("BaseTypographyBinder/Awake");
 		UpdateTypography();
 		
 		#if UNITY_EDITOR

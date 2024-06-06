@@ -60,6 +60,12 @@ namespace WaterSystem
             _wavePos.Dispose();
             _waveNormal.Dispose();
         }
+		
+		public static void ReleaseRegistry()
+		{
+			Registry.Clear();
+			_positionCount = 0;
+		}
 
         public static void UpdateSamplePoints(ref NativeArray<float3> samplePoints, int guid)
         {
@@ -71,8 +77,11 @@ namespace WaterSystem
             }
             else
             {
-                if (_positionCount + samplePoints.Length >= _positions.Length) return;
-                
+                if (_positionCount + samplePoints.Length >= _positions.Length)
+				{			
+					Debug.Log("UpdateSamplePoints full");
+					return;
+				}               
                 offsets = new int2(_positionCount, _positionCount + samplePoints.Length);
                 Registry.Add(guid, offsets);
                 _positionCount += samplePoints.Length;
@@ -81,7 +90,11 @@ namespace WaterSystem
 
         public static void GetData(int guid, ref float3[] outPos, ref float3[] outNorm)
         {
-            if (!Registry.TryGetValue(guid, out var offsets)) return;
+            if (!Registry.TryGetValue(guid, out var offsets))
+			{
+				Debug.Log("GetData return");
+				return;
+			}
             
             _wavePos.Slice(offsets.x, offsets.y - offsets.x).CopyTo(outPos);
             if(outNorm != null)

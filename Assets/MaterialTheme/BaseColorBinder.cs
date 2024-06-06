@@ -24,7 +24,7 @@ public abstract class BaseColorBinder : MonoBehaviour
 	
     protected virtual void Awake()
 	{
-		Debug.Log("BaseColorBinder/Awake");
+		// Debug.Log("BaseColorBinder/Awake");
 		UpdateColor();
 		
 		#if !UNITY_EDITOR

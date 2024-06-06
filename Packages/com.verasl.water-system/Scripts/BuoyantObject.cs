@@ -27,6 +27,8 @@ namespace WaterSystem
         private Bounds _voxelBounds; // bounds of the voxels
         public Vector3 centerOfMass = Vector3.zero; // Center Of Mass offset
         public float waterLevelOffset = 0f;
+		
+		public Vector3 heightTest;
 
         private const float Dampner = 0.005f;
         private const float WaterDensity = 1000;
@@ -165,6 +167,10 @@ namespace WaterSystem
             
             GerstnerWavesJobs.UpdateSamplePoints(ref _samplePoints, _guid);
             GerstnerWavesJobs.GetData(_guid, ref Heights, ref _normals);
+			
+			heightTest.x = Heights[0].x;
+			heightTest.y = Heights[0].y;
+			heightTest.z = Heights[0].z;
         }
 
         private void FixedUpdate()
