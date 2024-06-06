@@ -18,7 +18,7 @@ public class GameBGM : MonoBehaviour
 		}
 		else
 		{
-			Destroy(this);
+			Destroy(gameObject);
 		}
 	}
 	

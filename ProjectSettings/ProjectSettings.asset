@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 0
   companyName: Sherlore
-  productName: "\u9F8D\u821F\u6FC0\u9B25"
+  productName: "\u9F8D\u821F\u5927\u6230"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
@@ -139,7 +139,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0
+  bundleVersion: 2.0
   preloadedAssets:
   - {fileID: 0}
   - {fileID: 0}

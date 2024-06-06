@@ -419,8 +419,7 @@ public class RabboniModule : MonoBehaviour
 					
 					buttonInterruptConnectSwitch.Invoke(false);
 									
-					Invoke("InitPrefs", 0.3f);		
-					// Invoke("SubscribePrefs", 0.5f);		
+                    InitPrefs();	
 				}
 			}
 		}, (disconnectedAddress) => 
@@ -500,9 +499,20 @@ public class RabboniModule : MonoBehaviour
 		{
 			statusStrLog.Invoke("初始化完成");	
 			
-			Invoke("ResetPrefs", 0.3f);
+            ReadData();
 		});
 	}
+
+    public void ReadData()
+    {
+        //This step is for solving Rabboni bug
+        // statusStrLog.Invoke("更新裝置設定");	
+
+        Invoke("ResetPrefs", 0.2f);
+        BluetoothLEHardwareInterface.SubscribeCharacteristicWithDeviceAddress(targetAddress, console.SubscribeServiceUUID, console.SubscribeCharacteristic, null, (address, characteristicUUID, bytes) =>
+        {
+        });
+    }
 	
 	public void ResetPrefs()
 	{
@@ -529,10 +539,8 @@ public class RabboniModule : MonoBehaviour
 		{
 			statusStrLog.Invoke("設定完成");	
 			
-			Invoke("Subscribe", 0.3f);
+			Subscribe();
 			Invoke("GetBatteryLevel", 1f);
-			//Invoke("GetBatteryLevel2", 2f);
-			// Invoke("RequestMTU", 1f);
 		});
 	}
 		

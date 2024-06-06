@@ -327,7 +327,7 @@ public class RabboniConsole : MonoBehaviour
 		}
 		else
 		{
-			Destroy(this);
+			Destroy(gameObject);
 		}
 	}
 	
