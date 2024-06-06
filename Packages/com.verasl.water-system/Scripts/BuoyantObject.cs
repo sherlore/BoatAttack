@@ -109,7 +109,20 @@ namespace WaterSystem
         private void SetupColliders()
         {
             // The object must have a Collider
-            colliders = GetComponentsInChildren<Collider>();
+            Collider[] cols = GetComponentsInChildren<Collider>();
+			
+			List<Collider> colList = new List<Collider>();
+			
+			for(int i=0; i<cols.Length; i++)
+			{
+				if(!cols[i].CompareTag("NotBuoyant"))
+				{
+					colList.Add(cols[i]);
+				}
+			}
+			
+			colliders = colList.ToArray();
+			
             if (colliders.Length != 0) return;
             
             colliders = new Collider[1];

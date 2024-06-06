@@ -48,7 +48,7 @@ public class DragonBoat : MonoBehaviour
         leftAnimSpeed.Invoke(0f);
         rightAnimSpeed.Invoke(0f);
 		
-		// #if !UNITY_EDITOR
+		#if !UNITY_EDITOR
         if (RabboniConsole.instance.listDic.ContainsKey(deviceIdL))
         {
             rabboniModuleL = RabboniConsole.instance.listDic[deviceIdL];
@@ -60,7 +60,7 @@ public class DragonBoat : MonoBehaviour
             rabboniModuleR = RabboniConsole.instance.listDic[deviceIdR];
 			rabboniModuleL.IMUEvent.AddListener(UpdateEnergyR);
         }
-		// #endif
+		#endif
     }
 
     // Update is called once per frame
@@ -68,7 +68,7 @@ public class DragonBoat : MonoBehaviour
     {
 		if(!IsActive) return;
 		
-		// #if UNITY_EDITOR
+		#if UNITY_EDITOR
         if (leftAxis > 0f) 
         {
             var forward = boatRb.transform.forward;
@@ -84,7 +84,7 @@ public class DragonBoat : MonoBehaviour
             forward.Normalize();
             boatRb.AddForceAtPosition(boatingPower * rightAxis * forward, rightPowerPos.position, ForceMode.Acceleration);
         }		
-		// #endif
+		#endif
     }
 	
 	public void UpdateEnergyL(Vector3 acc, Vector3 gyro)
