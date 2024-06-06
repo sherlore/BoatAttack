@@ -28,6 +28,7 @@ public class DragonBoat : MonoBehaviour
     public string deviceIdL;
     public RabboniModule rabboniModuleR;
     public string deviceIdR;
+    public float energyCoef;
 
 	[Header("Boat")]
     public Rigidbody boatRb;
@@ -43,7 +44,9 @@ public class DragonBoat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		boatingPower = PlayerPrefs.GetFloat("BoatingPower", 3f);
+		boatingPower = PlayerPrefs.GetFloat("BoatingPower", 15f);
+		animSpeedCoef = PlayerPrefs.GetFloat("AnimSpeedCoef", 3f);
+		energyCoef = PlayerPrefs.GetFloat("EnergyCoef", 4f);
 		
         leftAnimSpeed.Invoke(0f);
         rightAnimSpeed.Invoke(0f);
@@ -91,7 +94,7 @@ public class DragonBoat : MonoBehaviour
 	{
 		leftAxis = rabboniModuleL.Energy/16f;
 		
-        leftAnimSpeed.Invoke(leftAxis * animSpeedCoef);
+        leftAnimSpeed.Invoke(leftAxis * energyCoef * animSpeedCoef);
 		
 		if(!IsActive) return;
 		
@@ -100,7 +103,7 @@ public class DragonBoat : MonoBehaviour
             var forward = boatRb.transform.forward;
             forward.y = 0f;
             forward.Normalize();
-            boatRb.AddForceAtPosition(boatingPower * leftAxis * forward, leftPowerPos.position, ForceMode.Acceleration);
+            boatRb.AddForceAtPosition(boatingPower * energyCoef * leftAxis * forward, leftPowerPos.position, ForceMode.Acceleration);
         }
 
 	}
@@ -109,7 +112,7 @@ public class DragonBoat : MonoBehaviour
 	{
 		rightAxis = rabboniModuleR.Energy/16f;
 
-        rightAnimSpeed.Invoke(rightAxis * animSpeedCoef);
+        rightAnimSpeed.Invoke(rightAxis * energyCoef * animSpeedCoef);
 		
 		if(!IsActive) return;
 		
@@ -118,7 +121,7 @@ public class DragonBoat : MonoBehaviour
             var forward = boatRb.transform.forward;
             forward.y = 0f;
             forward.Normalize();
-            boatRb.AddForceAtPosition(boatingPower * rightAxis * forward, rightPowerPos.position, ForceMode.Acceleration);
+            boatRb.AddForceAtPosition(boatingPower * energyCoef * rightAxis * forward, rightPowerPos.position, ForceMode.Acceleration);
         }	
 	}
 	

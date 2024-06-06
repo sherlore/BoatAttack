@@ -267,7 +267,7 @@ MonoBehaviour:
   - {fileID: 5772738174201330658}
   - {fileID: 6001367444048597726}
   - {fileID: 123573733845917059}
-  accScale: 1
+  accScale: 3
   gyroScale: 3
   dataRate: 1
 --- !u!1 &5163735360781120067

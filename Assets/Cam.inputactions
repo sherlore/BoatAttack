@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ScreenShot",
+                    "type": "Button",
+                    "id": "cf01b296-bc2e-476e-90c1-6ca71f302b3d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -198,6 +207,17 @@
                     "action": "Turn",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "f39bd1ed-3710-408d-b9c1-c31b8e1c239b",
+                    "path": "<Keyboard>/f11",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ScreenShot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

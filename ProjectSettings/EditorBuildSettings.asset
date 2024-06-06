@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/MatchStage_0.unity
     guid: a7b9facbaf496ec4ea859d7f18e2bb81
+  - enabled: 1
+    path: Assets/scenes/RaceStage_1.unity
+    guid: 4ad590b00da860b46bc1f5bccb3320d3
+  - enabled: 1
+    path: Assets/scenes/MatchStage_1.unity
+    guid: 58af36001ca9bb449aaae0d9a879916a
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 3f119a19757f84dac85ee298b9dd65d3,
       type: 2}
