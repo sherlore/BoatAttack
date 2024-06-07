@@ -1593,6 +1593,7 @@ GameObject:
   - component: {fileID: 562695955}
   - component: {fileID: 562695954}
   - component: {fileID: 562695956}
+  - component: {fileID: 562695957}
   m_Layer: 5
   m_Name: Progress
   m_TagString: Untagged
@@ -1642,7 +1643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9d987424469639345bde9c5142a994c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3aeefa82dd885134f93b66cefa6bcc5b, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1651,7 +1652,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2
+  m_PixelsPerUnitMultiplier: 6
 --- !u!222 &562695955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1674,6 +1675,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_key: secondary
   graphic: {fileID: 562695954}
+--- !u!114 &562695957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562695952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c162dc854d2f24fa639ba0623de5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  algorithm: 0
+  size: 2.5
+  spread: 0.2
+  useGlobalAngle: 0
+  offsetAngle: 90
+  offsetDistance: 0.9
+  offset: {x: 0.000000053644186, y: -0.9}
+  color: {r: 0, g: 0, b: 0, a: 0.703}
+  inset: 0
+  blendMode: 0
+  useCasterAlpha: 1
+  ignoreCasterColor: 0
+  colorBleedMode: 2
+  disableFitCompensation: 0
+  shadowAsSibling: 0
+  cutout: 0
+  baked: 0
+  modifiedFromInspector: 0
+  bakedShadows: []
 --- !u!1001 &621063857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3562,6 +3594,7 @@ GameObject:
   - component: {fileID: 1471382495}
   - component: {fileID: 1471382497}
   - component: {fileID: 1471382496}
+  - component: {fileID: 1471382498}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -3603,8 +3636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 0.15686275, g: 0.45490196, b: 1, a: 1}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3628,6 +3661,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471382494}
   m_CullTransparentMesh: 1
+--- !u!114 &1471382498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471382494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c162dc854d2f24fa639ba0623de5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  algorithm: 0
+  size: 4.891304
+  spread: 0.2
+  useGlobalAngle: 0
+  offsetAngle: 90
+  offsetDistance: 1.865217
+  offset: {x: 0.00000011117561, y: -1.865217}
+  color: {r: 0, g: 0, b: 0, a: 0.683}
+  inset: 0
+  blendMode: 0
+  useCasterAlpha: 1
+  ignoreCasterColor: 0
+  colorBleedMode: 2
+  disableFitCompensation: 0
+  shadowAsSibling: 0
+  cutout: 0
+  baked: 0
+  modifiedFromInspector: 0
+  bakedShadows: []
 --- !u!1 &1485872533
 GameObject:
   m_ObjectHideFlags: 0
@@ -4174,7 +4238,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1471382495}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4485,7 +4549,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 562695953}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -5030,7 +5094,7 @@ RectTransform:
   m_Children:
   - {fileID: 1290429648}
   m_Father: {fileID: 562695953}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

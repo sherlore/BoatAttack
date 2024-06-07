@@ -22,6 +22,6 @@ public class MatchResult : MonoBehaviour
 
     public void UpdateWinner(int winnerIndex)
     {
-        winnerText.text = PlayerPrefs.GetString(String.Format("MatchPlayerName_{0}", winnerIndex), winnerIndex == 0? "紅隊" : "藍隊");
+        winnerText.text = PlayerPrefs.GetString(String.Format("MatchPlayerName_{0}", winnerIndex), winnerIndex == 0? "藍隊" : "橘隊");
     }
 }
