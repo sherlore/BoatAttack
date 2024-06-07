@@ -63,7 +63,7 @@ public class RaceConsole : MonoBehaviour
 			}
 		}
 		
-		leaderboard.recordList.Insert(0, new RaceRecord(playerName, totalTime) );
+		leaderboard.recordList.Insert(rankIndex, new RaceRecord(playerName, totalTime) );
 		PlayerPrefs.SetString( leaderboardKey, leaderboard.SaveToString() );	
 				
 		//Save LeaderBoard Index to player result

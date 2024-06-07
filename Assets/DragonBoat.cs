@@ -61,13 +61,13 @@ public class DragonBoat : MonoBehaviour
         if (RabboniConsole.instance.listDic.ContainsKey(deviceIdR))
         {
             rabboniModuleR = RabboniConsole.instance.listDic[deviceIdR];
-			rabboniModuleL.IMUEvent.AddListener(UpdateEnergyR);
+			rabboniModuleR.IMUEvent.AddListener(UpdateEnergyR);
         }
 		#endif
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 		if(!IsActive) return;
 		
