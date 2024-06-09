@@ -837,7 +837,7 @@ PlayerSettings:
   - libSceS3DConversion.prx
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 79be2a6f7747789488f0ce52fc49cecf,
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: e3ab1f07a959edb4dbaa498e9c0be79a,
     type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 0
