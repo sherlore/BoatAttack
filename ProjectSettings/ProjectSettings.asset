@@ -210,9 +210,9 @@ PlayerSettings:
   tvOSTopShelfImageWideLayers: []
   tvOSTopShelfImageWideLayers2x: []
   iOSLaunchScreenType: 1
-  iOSLaunchScreenPortrait: {fileID: 2800000, guid: 79be2a6f7747789488f0ce52fc49cecf,
+  iOSLaunchScreenPortrait: {fileID: 2800000, guid: e3ab1f07a959edb4dbaa498e9c0be79a,
     type: 3}
-  iOSLaunchScreenLandscape: {fileID: 2800000, guid: 79be2a6f7747789488f0ce52fc49cecf,
+  iOSLaunchScreenLandscape: {fileID: 2800000, guid: e3ab1f07a959edb4dbaa498e9c0be79a,
     type: 3}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
@@ -221,7 +221,7 @@ PlayerSettings:
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
   iOSLaunchScreeniPadType: 1
-  iOSLaunchScreeniPadImage: {fileID: 2800000, guid: 79be2a6f7747789488f0ce52fc49cecf,
+  iOSLaunchScreeniPadImage: {fileID: 2800000, guid: e3ab1f07a959edb4dbaa498e9c0be79a,
     type: 3}
   iOSLaunchScreeniPadBackgroundColor:
     serializedVersion: 2
@@ -263,7 +263,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 2
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 2
-  androidSplashScreen: {fileID: 2800000, guid: 79be2a6f7747789488f0ce52fc49cecf, type: 3}
+  androidSplashScreen: {fileID: 2800000, guid: e3ab1f07a959edb4dbaa498e9c0be79a, type: 3}
   AndroidKeystoreName: '{inproject}: user.keystore'
   AndroidKeyaliasName: user
   AndroidBuildApkPerCpuArchitecture: 0
