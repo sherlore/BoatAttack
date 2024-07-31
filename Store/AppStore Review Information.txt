@@ -1,0 +1,15 @@
+龍舟大戰是需要連接藍牙體感感測器才能遊玩的遊戲
+藉由體感感測器，玩家可揮舞手臂或道具槳來體感划動龍舟
+
+實際遊玩體驗可參考包含實際玩家遊玩影片的遊戲PV
+Game PV: https://youtu.be/M037wm7a5o4
+
+Rabboni體感感測器的取得與購買方式，提供於AppStore描述與支援URL中
+
+
+※Guideline 2.1 - Information Needed
+Demo Video: https://youtu.be/VWRWuas0GGY
+(The demo video runs the game on a physical Apple device and demonstrates the initial pairing process and workflow between my game and the designated hardware.)
+
+※Guideline 5.2.1 - Legal - Intellectual Property
+The attached file 授權證明.pdf provided the evidence that the game has been authorized by 矽譜科技股份有限公司.
