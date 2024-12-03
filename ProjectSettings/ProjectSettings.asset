@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 0
   companyName: SIPPLink
-  productName: "\u9F8D\u821F\u5927\u6230"
+  productName: "\u6975\u901F\u5212\u884C"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
@@ -139,7 +139,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 2.5
+  bundleVersion: 1.0
   preloadedAssets:
   - {fileID: 0}
   - {fileID: 0}
@@ -164,7 +164,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.SIPPLink.DragonBoat
+    Android: com.SIPPLink.SpeedBoating
     Lumin: com.DefaultCompany.BoatAttack
     Standalone: com.UnityTechnologies.BoatAttack
     iPhone: com.SIPPLink.DragonBoat
@@ -173,7 +173,7 @@ PlayerSettings:
     iPhone: 1
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 2
+  AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 28
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -259,6 +259,7 @@ PlayerSettings:
   useCustomLauncherGradleManifest: 0
   useCustomBaseGradleTemplate: 0
   useCustomGradlePropertiesTemplate: 0
+  useCustomGradleSettingsTemplate: 0
   useCustomProguardFile: 0
   AndroidTargetArchitectures: 2
   AndroidTargetDevices: 0
@@ -279,7 +280,6 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   chromeosInputEmulation: 1
-  AndroidMinifyWithR8: 0
   AndroidMinifyRelease: 0
   AndroidMinifyDebug: 0
   AndroidValidateAppBundleSize: 1

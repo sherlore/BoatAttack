@@ -12,56 +12,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9700221e963b91d4ca2d806baa3baced, type: 3}
   m_Name: ThemeBuilder
   m_EditorClassIdentifier: 
-  themeFile: {fileID: 11400000, guid: e765e489ecdd45545a17af6bf1ed15e3, type: 2}
-  lightColorPaletteJson: "\"primary\": \"#904A40\",\n            \"surfaceTint\":
-    \"#904A40\",\n            \"onPrimary\": \"#FFFFFF\",\n            \"primaryContainer\":
-    \"#FFDAD5\",\n            \"onPrimaryContainer\": \"#3B0905\",\n            \"secondary\":
-    \"#775651\",\n            \"onSecondary\": \"#FFFFFF\",\n            \"secondaryContainer\":
-    \"#FFDAD5\",\n            \"onSecondaryContainer\": \"#2C1512\",\n           
-    \"tertiary\": \"#705C2E\",\n            \"onTertiary\": \"#FFFFFF\",\n           
-    \"tertiaryContainer\": \"#FCDFA6\",\n            \"onTertiaryContainer\": \"#251A00\",\n           
+  themeFile: {fileID: 11400000, guid: 86e57cd0a300314458a56214563f761a, type: 2}
+  lightColorPaletteJson: "\"primary\": \"#446832\",\n            \"surfaceTint\":
+    \"#446832\",\n            \"onPrimary\": \"#FFFFFF\",\n            \"primaryContainer\":
+    \"#C4EFAC\",\n            \"onPrimaryContainer\": \"#062100\",\n            \"secondary\":
+    \"#55624C\",\n            \"onSecondary\": \"#FFFFFF\",\n            \"secondaryContainer\":
+    \"#D8E7CB\",\n            \"onSecondaryContainer\": \"#131F0D\",\n           
+    \"tertiary\": \"#386667\",\n            \"onTertiary\": \"#FFFFFF\",\n           
+    \"tertiaryContainer\": \"#BBEBEC\",\n            \"onTertiaryContainer\": \"#002021\",\n           
     \"error\": \"#BA1A1A\",\n            \"onError\": \"#FFFFFF\",\n            \"errorContainer\":
     \"#FFDAD6\",\n            \"onErrorContainer\": \"#410002\",\n            \"background\":
-    \"#FFF8F6\",\n            \"onBackground\": \"#231918\",\n            \"surface\":
-    \"#FFF8F6\",\n            \"onSurface\": \"#231918\",\n            \"surfaceVariant\":
-    \"#F5DDDA\",\n            \"onSurfaceVariant\": \"#534341\",\n            \"outline\":
-    \"#857370\",\n            \"outlineVariant\": \"#D8C2BE\",\n            \"shadow\":
+    \"#F8FAF0\",\n            \"onBackground\": \"#191D16\",\n            \"surface\":
+    \"#F8FAF0\",\n            \"onSurface\": \"#191D16\",\n            \"surfaceVariant\":
+    \"#DFE4D7\",\n            \"onSurfaceVariant\": \"#43483E\",\n            \"outline\":
+    \"#73796D\",\n            \"outlineVariant\": \"#C3C8BB\",\n            \"shadow\":
     \"#000000\",\n            \"scrim\": \"#000000\",\n            \"inverseSurface\":
-    \"#392E2C\",\n            \"inverseOnSurface\": \"#FFEDEA\",\n            \"inversePrimary\":
-    \"#FFB4A8\",\n            \"primaryFixed\": \"#FFDAD5\",\n            \"onPrimaryFixed\":
-    \"#3B0905\",\n            \"primaryFixedDim\": \"#FFB4A8\",\n            \"onPrimaryFixedVariant\":
-    \"#73342B\",\n            \"secondaryFixed\": \"#FFDAD5\",\n            \"onSecondaryFixed\":
-    \"#2C1512\",\n            \"secondaryFixedDim\": \"#E7BDB6\",\n            \"onSecondaryFixedVariant\":
-    \"#5D3F3B\",\n            \"tertiaryFixed\": \"#FCDFA6\",\n            \"onTertiaryFixed\":
-    \"#251A00\",\n            \"tertiaryFixedDim\": \"#DEC38C\",\n            \"onTertiaryFixedVariant\":
-    \"#564419\",\n            \"surfaceDim\": \"#E8D6D3\",\n            \"surfaceBright\":
-    \"#FFF8F6\",\n            \"surfaceContainerLowest\": \"#FFFFFF\",\n           
-    \"surfaceContainerLow\": \"#FFF0EE\",\n            \"surfaceContainer\": \"#FCEAE7\",\n           
-    \"surfaceContainerHigh\": \"#F7E4E1\",\n            \"surfaceContainerHighest\":
-    \"#F1DEDC\""
-  darkColorPaletteJson: "\"primary\": \"#FFB4A8\",\n            \"surfaceTint\":
-    \"#FFB4A8\",\n            \"onPrimary\": \"#561E17\",\n            \"primaryContainer\":
-    \"#73342B\",\n            \"onPrimaryContainer\": \"#FFDAD5\",\n            \"secondary\":
-    \"#E7BDB6\",\n            \"onSecondary\": \"#442925\",\n            \"secondaryContainer\":
-    \"#5D3F3B\",\n            \"onSecondaryContainer\": \"#FFDAD5\",\n           
-    \"tertiary\": \"#DEC38C\",\n            \"onTertiary\": \"#3E2E04\",\n           
-    \"tertiaryContainer\": \"#564419\",\n            \"onTertiaryContainer\": \"#FCDFA6\",\n           
+    \"#2E312B\",\n            \"inverseOnSurface\": \"#EFF2E7\",\n            \"inversePrimary\":
+    \"#A9D292\",\n            \"primaryFixed\": \"#C4EFAC\",\n            \"onPrimaryFixed\":
+    \"#062100\",\n            \"primaryFixedDim\": \"#A9D292\",\n            \"onPrimaryFixedVariant\":
+    \"#2D4F1D\",\n            \"secondaryFixed\": \"#D8E7CB\",\n            \"onSecondaryFixed\":
+    \"#131F0D\",\n            \"secondaryFixedDim\": \"#BCCBB0\",\n            \"onSecondaryFixedVariant\":
+    \"#3E4A36\",\n            \"tertiaryFixed\": \"#BBEBEC\",\n            \"onTertiaryFixed\":
+    \"#002021\",\n            \"tertiaryFixedDim\": \"#A0CFD0\",\n            \"onTertiaryFixedVariant\":
+    \"#1E4E4F\",\n            \"surfaceDim\": \"#D9DBD1\",\n            \"surfaceBright\":
+    \"#F8FAF0\",\n            \"surfaceContainerLowest\": \"#FFFFFF\",\n           
+    \"surfaceContainerLow\": \"#F2F5EA\",\n            \"surfaceContainer\": \"#EDEFE5\",\n           
+    \"surfaceContainerHigh\": \"#E7E9DF\",\n            \"surfaceContainerHighest\":
+    \"#E1E4D9\""
+  darkColorPaletteJson: "\"primary\": \"#A9D292\",\n            \"surfaceTint\":
+    \"#A9D292\",\n            \"onPrimary\": \"#163808\",\n            \"primaryContainer\":
+    \"#2D4F1D\",\n            \"onPrimaryContainer\": \"#C4EFAC\",\n            \"secondary\":
+    \"#BCCBB0\",\n            \"onSecondary\": \"#283421\",\n            \"secondaryContainer\":
+    \"#3E4A36\",\n            \"onSecondaryContainer\": \"#D8E7CB\",\n           
+    \"tertiary\": \"#A0CFD0\",\n            \"onTertiary\": \"#003738\",\n           
+    \"tertiaryContainer\": \"#1E4E4F\",\n            \"onTertiaryContainer\": \"#BBEBEC\",\n           
     \"error\": \"#FFB4AB\",\n            \"onError\": \"#690005\",\n            \"errorContainer\":
     \"#93000A\",\n            \"onErrorContainer\": \"#FFDAD6\",\n            \"background\":
-    \"#1A1110\",\n            \"onBackground\": \"#F1DEDC\",\n            \"surface\":
-    \"#1A1110\",\n            \"onSurface\": \"#F1DEDC\",\n            \"surfaceVariant\":
-    \"#534341\",\n            \"onSurfaceVariant\": \"#D8C2BE\",\n            \"outline\":
-    \"#A08C89\",\n            \"outlineVariant\": \"#534341\",\n            \"shadow\":
+    \"#11140F\",\n            \"onBackground\": \"#E1E4D9\",\n            \"surface\":
+    \"#11140F\",\n            \"onSurface\": \"#E1E4D9\",\n            \"surfaceVariant\":
+    \"#43483E\",\n            \"onSurfaceVariant\": \"#C3C8BB\",\n            \"outline\":
+    \"#8D9287\",\n            \"outlineVariant\": \"#43483E\",\n            \"shadow\":
     \"#000000\",\n            \"scrim\": \"#000000\",\n            \"inverseSurface\":
-    \"#F1DEDC\",\n            \"inverseOnSurface\": \"#392E2C\",\n            \"inversePrimary\":
-    \"#904A40\",\n            \"primaryFixed\": \"#FFDAD5\",\n            \"onPrimaryFixed\":
-    \"#3B0905\",\n            \"primaryFixedDim\": \"#FFB4A8\",\n            \"onPrimaryFixedVariant\":
-    \"#73342B\",\n            \"secondaryFixed\": \"#FFDAD5\",\n            \"onSecondaryFixed\":
-    \"#2C1512\",\n            \"secondaryFixedDim\": \"#E7BDB6\",\n            \"onSecondaryFixedVariant\":
-    \"#5D3F3B\",\n            \"tertiaryFixed\": \"#FCDFA6\",\n            \"onTertiaryFixed\":
-    \"#251A00\",\n            \"tertiaryFixedDim\": \"#DEC38C\",\n            \"onTertiaryFixedVariant\":
-    \"#564419\",\n            \"surfaceDim\": \"#1A1110\",\n            \"surfaceBright\":
-    \"#423735\",\n            \"surfaceContainerLowest\": \"#140C0B\",\n           
-    \"surfaceContainerLow\": \"#231918\",\n            \"surfaceContainer\": \"#271D1C\",\n           
-    \"surfaceContainerHigh\": \"#322826\",\n            \"surfaceContainerHighest\":
-    \"#3D3231\""
+    \"#E1E4D9\",\n            \"inverseOnSurface\": \"#2E312B\",\n            \"inversePrimary\":
+    \"#446832\",\n            \"primaryFixed\": \"#C4EFAC\",\n            \"onPrimaryFixed\":
+    \"#062100\",\n            \"primaryFixedDim\": \"#A9D292\",\n            \"onPrimaryFixedVariant\":
+    \"#2D4F1D\",\n            \"secondaryFixed\": \"#D8E7CB\",\n            \"onSecondaryFixed\":
+    \"#131F0D\",\n            \"secondaryFixedDim\": \"#BCCBB0\",\n            \"onSecondaryFixedVariant\":
+    \"#3E4A36\",\n            \"tertiaryFixed\": \"#BBEBEC\",\n            \"onTertiaryFixed\":
+    \"#002021\",\n            \"tertiaryFixedDim\": \"#A0CFD0\",\n            \"onTertiaryFixedVariant\":
+    \"#1E4E4F\",\n            \"surfaceDim\": \"#11140F\",\n            \"surfaceBright\":
+    \"#373A33\",\n            \"surfaceContainerLowest\": \"#0C0F0A\",\n           
+    \"surfaceContainerLow\": \"#191D16\",\n            \"surfaceContainer\": \"#1D211A\",\n           
+    \"surfaceContainerHigh\": \"#282B24\",\n            \"surfaceContainerHighest\":
+    \"#32362F\""

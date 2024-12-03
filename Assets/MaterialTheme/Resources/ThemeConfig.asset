@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   themeMode: 1
   useDynamicTheme: 1
-  themeFile: {fileID: 11400000, guid: e765e489ecdd45545a17af6bf1ed15e3, type: 2}
+  themeFile: {fileID: 11400000, guid: 86e57cd0a300314458a56214563f761a, type: 2}
   colorOptions:
   - Default
   - primary
@@ -66,10 +66,6 @@ MonoBehaviour:
   - surfaceContainer
   - surfaceContainerHigh
   - surfaceContainerHighest
-  - Custom_Orange
-  - Custom_Green
-  - Custom_Purple
-  - Custom_Lemon
   defaultTypographyAttr:
     fontAsset: {fileID: 11400000, guid: e44d881be54d4fe4996ec87b365a6345, type: 2}
     fontSize: 20
