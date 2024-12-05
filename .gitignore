@@ -46,3 +46,5 @@ SerializedBuildInfo
 SwitchIL2CPP*
 Assets/ActualImages*
 Packages/packages-lock.json
+Assets/Firebase/Plugins/x86_64/FirebaseCppApp-12_2_1.bundle
+Assets/Firebase/Plugins/x86_64/FirebaseCppApp-12_2_1.bundle.meta
