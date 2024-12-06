@@ -1,0 +1,227 @@
+{
+  "project_info": {
+    "project_number": "339811668481",
+    "firebase_url": "https://rabbonitemp.firebaseio.com",
+    "project_id": "rabbonitemp",
+    "storage_bucket": "rabbonitemp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339811668481:android:62a39b28c90ddcbacb6600",
+        "android_client_info": {
+          "package_name": "com.SIPPLink.FlashPunch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339811668481-emh196uqisv9top23d8ve0husv2p9cpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgRgqAMZ3LDzqqyXjUuZW9jDOCUO3svho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339811668481-emh196uqisv9top23d8ve0husv2p9cpp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339811668481-5uigd6ho52b2rfhgp1589f0efcmluqnl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SIPPLink.SpeedBoating"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339811668481:android:defa6b02ea022abfcb6600",
+        "android_client_info": {
+          "package_name": "com.SIPPLink.SpeedBoating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339811668481-emh196uqisv9top23d8ve0husv2p9cpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgRgqAMZ3LDzqqyXjUuZW9jDOCUO3svho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339811668481-emh196uqisv9top23d8ve0husv2p9cpp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339811668481-5uigd6ho52b2rfhgp1589f0efcmluqnl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SIPPLink.SpeedBoating"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339811668481:android:afcf658b717d1eb0cb6600",
+        "android_client_info": {
+          "package_name": "com.SIPPLink.TreasureRace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339811668481-emh196uqisv9top23d8ve0husv2p9cpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgRgqAMZ3LDzqqyXjUuZW9jDOCUO3svho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339811668481-emh196uqisv9top23d8ve0husv2p9cpp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339811668481-5uigd6ho52b2rfhgp1589f0efcmluqnl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SIPPLink.SpeedBoating"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339811668481:android:6c90a1e9a06b6f9bcb6600",
+        "android_client_info": {
+          "package_name": "com.Sherlore.FlashPunch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339811668481-emh196uqisv9top23d8ve0husv2p9cpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgRgqAMZ3LDzqqyXjUuZW9jDOCUO3svho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339811668481-emh196uqisv9top23d8ve0husv2p9cpp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339811668481-5uigd6ho52b2rfhgp1589f0efcmluqnl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SIPPLink.SpeedBoating"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339811668481:android:475bfda0e0646d31cb6600",
+        "android_client_info": {
+          "package_name": "com.Sherlore.RabboniTraveler2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339811668481-emh196uqisv9top23d8ve0husv2p9cpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgRgqAMZ3LDzqqyXjUuZW9jDOCUO3svho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339811668481-emh196uqisv9top23d8ve0husv2p9cpp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339811668481-5uigd6ho52b2rfhgp1589f0efcmluqnl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SIPPLink.SpeedBoating"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339811668481:android:6ea457ba85d1cdf6cb6600",
+        "android_client_info": {
+          "package_name": "com.Sherlore.TreasureRace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339811668481-emh196uqisv9top23d8ve0husv2p9cpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgRgqAMZ3LDzqqyXjUuZW9jDOCUO3svho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339811668481-emh196uqisv9top23d8ve0husv2p9cpp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339811668481-5uigd6ho52b2rfhgp1589f0efcmluqnl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SIPPLink.SpeedBoating"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

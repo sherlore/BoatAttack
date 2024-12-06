@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>339811668481-5uigd6ho52b2rfhgp1589f0efcmluqnl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.339811668481-5uigd6ho52b2rfhgp1589f0efcmluqnl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBvsJ8LPnBFoZusvZXHHapJywB--Uxhgm4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>339811668481</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.SIPPLink.SpeedBoating</string>
+	<key>PROJECT_ID</key>
+	<string>rabbonitemp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rabbonitemp.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:339811668481:ios:e138613f247f9491cb6600</string>
+	<key>DATABASE_URL</key>
+	<string>https://rabbonitemp.firebaseio.com</string>
+</dict>
+</plist>

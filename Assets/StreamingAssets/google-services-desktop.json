@@ -1,0 +1,37 @@
+{
+  "project_info": {
+    "project_number": "339811668481",
+    "firebase_url": "https://rabbonitemp.firebaseio.com",
+    "project_id": "rabbonitemp",
+    "storage_bucket": "rabbonitemp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339811668481:ios:e138613f247f9491cb6600",
+        "android_client_info": {
+          "package_name": "com.SIPPLink.SpeedBoating"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvsJ8LPnBFoZusvZXHHapJywB--Uxhgm4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339811668481-5uigd6ho52b2rfhgp1589f0efcmluqnl.apps.googleusercontent.com"
+        }
+      ]
+    }
+  ],
+  "configuration_version": "1"
+}
